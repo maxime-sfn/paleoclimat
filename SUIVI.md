@@ -15,6 +15,12 @@ Définition des grands axes de notre travail :
 4) Prédiction : Chercher à  compléter les données manquantes par différents modèles et potentiellement l'entraînement d'un réseau de neurones. 
 
 - **Pour la prochaine séance**
-	- Prolonger les données jusqu'à nos jours.
+	- Faire le planning du projet.
+	- Prolonger les données jusqu'à nos jours (pour le gel du lac et les sakuras).
 	- Déterminer d'autres paramètres d'influence. Chercher notamment des données de températures et de dendrochronologie.
 	- Ajuster les changements de calendrier dans les tableurs
+	- Trouver d'autres bases de données dans d'autres zones géographiques de l'hémisphère nord (par exemple le Nile pour l'Egypte et l'Europe).
+	- Feuilleté L'histoire du climat depuis l'an mil (premier volume et deuxième volume) de Le Roy Ladure.
+
+
+**Prochain rendez vous avec l'encadrant : 04/03/2025 à 10:30**
