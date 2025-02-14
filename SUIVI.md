@@ -17,3 +17,4 @@ Définition des grands axes de notre travail :
 - **Pour la prochaine séance**
 	- Prolonger les données jusqu'à nos jours.
 	- Déterminer d'autres paramètres d'influence. Chercher notamment des données de températures et de dendrochronologie.
+	- Ajuster les changements de calendrier dans les tableurs
