@@ -27,7 +27,7 @@ Définition des grands axes de notre travail :
 
 ## Séance du 18/02/25 : 
 ### Bibliographie
-- **Maxime** : Données sur date de floraisons des sakuras à Kyoto (821-2021). Demande aux moines locaux pour avoir le gel du lac de 1953 à aujourd'hui
+- **Maxime** : Données sur date de floraisons des sakuras à Kyoto (821-2021). Demande aux moines locaux pour avoir le gel du lac de 1953 à aujourd'hui. Data sur la température moyenne de Kyoto en Mars depuis l'an mille (modèle de prédiction).
 - **Léo** : Données sur la température à Kyoto (816-1995), éruptions volcaniques (1500-1700)
 - **Gaspard** : Données sur les catastrophes naturelles à Kyoto (600-1100), météo de Kyoto depuis les années 30 à scrapper (https://www.wunderground.com/history/monthly/jp/kyoto/RJOO)
 - **Adrien** : Données de dendrochronologie à l'ouest du Rhin (820-1960), pluviométrie et température des vignes dans la vallée du Rhin, date moyenne de début des vendanges (France, Allemagne, Suisse).
