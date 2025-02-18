@@ -23,3 +23,5 @@ Allemagne, Ouest du Rhin: Dendrochronologie: Épaisseur Moyenne des tree rings e
 France-Allemagne-Suisse: Date moyenne du début des vendanges en nbr de jour depuis le 1er Septembre de 1484 à 1977 (Cf page 198) 
  
 France; cf p 201, Quelques détails sur des événements historiques (notamment les famines) dont ont peut parler lors de l’analyse qualitative des données.  (Cf page 201)
+
+France: description des hivers dans le Midi de 1490 a 1610 (Commentaires qualitatifs)
