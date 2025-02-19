@@ -65,3 +65,5 @@ Prédiction des données futures: 26/05/2024, 2w
 Semaine Finale: 23/06/2024, 1w
 Analyse qualitative des prédictions et comparaison avec modèles existants: 23/06/2024, 1w
 Finalisation du poster et préparation de la présentation finale: 23/06/2024, 1w
+
+```
