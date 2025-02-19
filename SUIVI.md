@@ -39,4 +39,4 @@ Définition des grands axes de notre travail :
 - Prédiction : même chose
 
 ## 19/02/25
-**Adrien**: 1TH Finalisation et mise en forme du planning previsionnel (Version pdf et Version Mermaid disponible sur le git), envoie à l'encadrant 
+- **Adrien**: 1TH Finalisation et mise en forme du planning previsionnel (Version pdf et Version Mermaid disponible sur le git), envoie à l'encadrant 
