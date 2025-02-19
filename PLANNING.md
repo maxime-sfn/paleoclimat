@@ -59,10 +59,9 @@ gantt
 
   section Partie IV - Prédictions
   Séance 15-16-17: 26/05/2024, 2w
-  Reconstruction des données manquantes via réseaux de neurones: 26/05/2024, 2w
-  Adrien, Maxime: 26/05/2024, 2w
-  Prédiction des données futures: 26/05/2024, 2w
-  Léo, Gaspard: 26/05/2024, 2w
+  Reconstruction des données manquantes via réseaux de neurones (Adrien, Maxime): 26/05/2024, 2w
+  Prédiction des données futures (Léo, Gaspard) : 26/05/2024, 2w
+
 
   Semaine Finale: 23/06/2024, 1w
   Analyse qualitative des prédictions et comparaison avec modèles existants: 23/06/2024, 1w
