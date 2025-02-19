@@ -36,3 +36,6 @@ Définition des grands axes de notre travail :
 - Construction des datasets : dépend des nouvelles données trouvées mais au plus tard le 11/03/25
 - Analyse : difficile à estimer sans avoir fini de collecter toutes les données
 - Prédiction : même chose
+
+#19/02/25
+**Adrien**: 1TH Finalisation et mise en forme du planning previsionnel (Version pdf et Version Mermaid disponible sur le git), envoie à l'encadrant 
