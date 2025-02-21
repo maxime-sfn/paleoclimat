@@ -25,7 +25,8 @@ Définition des grands axes de notre travail :
 
 **Prochain rendez vous avec l'encadrant : 04/03/2025 à 10:30**
 
-## Séance du 18/02/25 : 
+## Séance du 18/02/25 (2TH pour tout les membres du groupe): 
+
 ### Bibliographie
 - **Maxime** : Données sur date de floraisons des sakuras à Kyoto (821-2021). Demande aux moines locaux pour avoir le gel du lac de 1953 à aujourd'hui. Data sur la température moyenne de Kyoto en Mars depuis l'an mille (modèle de prédiction).
 - **Léo** : Données sur la température à Kyoto (816-1995), éruptions volcaniques (1500-1700)
@@ -36,3 +37,6 @@ Définition des grands axes de notre travail :
 - Construction des datasets : dépend des nouvelles données trouvées mais au plus tard le 11/03/25
 - Analyse : difficile à estimer sans avoir fini de collecter toutes les données
 - Prédiction : même chose
+
+## 19/02/25
+- **Adrien**: 1TH Finalisation et mise en forme du planning previsionnel (Version pdf et Version Mermaid disponible sur le git), envoie à l'encadrant 
