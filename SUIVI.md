@@ -40,3 +40,14 @@ Définition des grands axes de notre travail :
 
 ## 19/02/25
 - **Adrien**: 1TH Finalisation et mise en forme du planning previsionnel (Version pdf et Version Mermaid disponible sur le git), envoie à l'encadrant 
+
+## Séance du 04/03/2025	
+### Mise en commun des données
+- **Léo et Gaspard** : Création d'un tableau plages_temporelles.md regroupant les dates de début et de fin des différents sets de données
+### Entretien avec l'encadrant
+- **Léo, Gaspard, Adrien, Maxime** : Gros bilan avec l'encadrant sur toutes les datas collectées afin de choisir les pistes à explorer en priorité. Le détail de l'entretien est dans notes_rdv_encadrant_04-03.md
+### Pour la prochaine fois
+- **Maxime** : Creuser sur les papiers japonais traitant de la reconstitution de la température moyenne à partir de la floraison des sakuras 
+- **Adrien** : Focus sur la dendochronologie en Europe
+- **Léo et Gaspard** : Uniformiser les données des différents tableaux excel + les tracer suivant des unités comparables
+## Prochain rendez-vous avec l'encadrant le 18/03/2025 à 10h30
