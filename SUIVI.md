@@ -50,4 +50,18 @@ Définition des grands axes de notre travail :
 - **Maxime** : Creuser sur les papiers japonais traitant de la reconstitution de la température moyenne à partir de la floraison des sakuras 
 - **Adrien** : Focus sur la dendochronologie en Europe
 - **Léo et Gaspard** : Uniformiser les données des différents tableaux excel + les tracer suivant des unités comparables
+
+## Séance du 11/03/2025
+
+### Mise à jour de la base de donnée
+
+- **Adrien** : Ajout des données sur l'europe.
+- **Gaspard** : Remise en forme des données sur l'omiwatari et cherry blossom
+- **Léo** : Aide pour les données sur l'omiwatari
+- **Maxime** : Ajout des données sur l'omiwatari
+
+### Affichage / tracé des données
+
+- **Léo** : Script python pour l'affichage / tracé des données (qui sont au format csv).
+
 ## Prochain rendez-vous avec l'encadrant le 18/03/2025 à 10h30
