@@ -12,12 +12,11 @@ class Affichage:
         self.dvi = self.data.iloc[:, 1].tolist()
         
     def affichageDVI(self):
-        plt.scatter(self.years, self.dvi, color='b', marker='o', label='Points irréguliers')
-        plt.plot(self.years, self.dvi, linestyle='dashed', color='gray', alpha=0.5)  # Relier les points
+        plt.scatter(self.years, self.dvi, color='b', marker='o')
+        plt.plot(self.years, self.dvi, linestyle='dashed', color='gray', alpha=0.5)  # Relie les points
 
         plt.xlabel(f"{self.yearLabel}")
         plt.ylabel(f"DVI (Dust Veil Index)")
-        plt.title('Affichage de points à intervalles irréguliers')
         plt.legend()
         plt.grid(True)
 
