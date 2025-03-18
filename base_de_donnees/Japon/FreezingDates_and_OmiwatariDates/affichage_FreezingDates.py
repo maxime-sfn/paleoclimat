@@ -36,7 +36,7 @@ class Affichage:
         
         freezingDates = self.freezingDatesFilterd()
         
-        plt.scatter(self.year, freezingDates, color='b', marker='x', label='Irregular points')
+        plt.scatter(self.year, freezingDates, color='b', marker='x', label='Freezing dates')
         plt.plot(self.year, freezingDates, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
         plt.xlabel(f"{self.year_label}")
         plt.ylabel(f"{self.freezingDates_label}")
@@ -45,11 +45,42 @@ class Affichage:
         plt.grid(True)
         plt.show()
         
+    def displayFreezingDatesChunks(self, chunk_size=200):
+        cherryDates = self.freezingDatesFilterd()
+        
+        min_year, max_year = min(self.year), max(self.year)
+        num_chunks = (max_year - min_year) // chunk_size + 1
+
+        for i in range(num_chunks):
+            start_year = min_year + i * chunk_size
+            end_year = start_year + chunk_size
+
+            # Filter data for this chunk
+            indices = [j for j, y in enumerate(self.year) if start_year <= y < end_year]
+            years_chunk = [self.year[j] for j in indices]
+            dates_chunk = [cherryDates[j] for j in indices]
+
+            if not years_chunk:  # Skip empty chunks
+                continue
+
+            # Create a new figure for each chunk
+            plt.figure(figsize=(10, 5))
+            plt.scatter(years_chunk, dates_chunk, color='b', marker='x', label='Freezing dates')
+            plt.plot(years_chunk, dates_chunk, linestyle='dashed', color='gray', alpha=0.5)
+            plt.xlabel(self.year_label)
+            plt.ylabel("DOY from Dec 1st")
+            plt.title(f'Freezing dates of lake suwa (DOY with beggining 01/12) ({start_year}-{end_year-1})')
+            plt.legend()
+            plt.grid(True)
+
+            # Show and wait before plotting the next figure
+            plt.show()
+        
     def displayOmiwatariDates(self):
         
         omiwatariDates = self.omiwatariDatesFilterd()
         
-        plt.scatter(self.year, omiwatariDates, color='b', marker='x', label='Irregular points')
+        plt.scatter(self.year, omiwatariDates, color='b', marker='x', label='Omiwatari points')
         plt.plot(self.year, omiwatariDates, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
         plt.xlabel(f"{self.year_label}")
         plt.ylabel(f"Duration of the lake freezing period (days)")
@@ -57,6 +88,37 @@ class Affichage:
         plt.legend()
         plt.grid(True)
         plt.show()
+        
+    def displayOmiwatariDatesChunks(self, chunk_size=200):
+        cherryDates = self.omiwatariDatesFilterd()
+        
+        min_year, max_year = min(self.year), max(self.year)
+        num_chunks = (max_year - min_year) // chunk_size + 1
+
+        for i in range(num_chunks):
+            start_year = min_year + i * chunk_size
+            end_year = start_year + chunk_size
+
+            # Filter data for this chunk
+            indices = [j for j, y in enumerate(self.year) if start_year <= y < end_year]
+            years_chunk = [self.year[j] for j in indices]
+            dates_chunk = [cherryDates[j] for j in indices]
+
+            if not years_chunk:  # Skip empty chunks
+                continue
+
+            # Create a new figure for each chunk
+            plt.figure(figsize=(10, 5))
+            plt.scatter(years_chunk, dates_chunk, color='b', marker='x', label='Omiwatari dates')
+            plt.plot(years_chunk, dates_chunk, linestyle='dashed', color='gray', alpha=0.5)
+            plt.xlabel(self.year_label)
+            plt.ylabel("DOY from Dec 1st")
+            plt.title(f'Omiwatari dates of lake suwa (DOY with beggining 01/12) ({start_year}-{end_year-1})')
+            plt.legend()
+            plt.grid(True)
+
+            # Show and wait before plotting the next figure
+            plt.show()
         
     def displayFreezingDatesAndOmiwatariDatesLength(self):
         
@@ -81,6 +143,8 @@ class Affichage:
 
 
 Affichage = Affichage(rf"data.csv")
-#Affichage.displayFreezingDates()
-#Affichage.displayOmiwatariDates()
+Affichage.displayFreezingDates()
+Affichage.displayOmiwatariDates()
 Affichage.displayFreezingDatesAndOmiwatariDatesLength()
+Affichage.displayFreezingDatesChunks()
+Affichage.displayOmiwatariDatesChunks()

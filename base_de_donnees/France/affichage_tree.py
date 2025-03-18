@@ -10,32 +10,38 @@ class Affichage:
         self.taille_label = self.data.columns[1]
                 
         self.year = self.data.iloc[:, 0].tolist() # Convert the first column to a list
+        self.year = [int(y) for y in self.year] # Convert the years into integers
         self.taille = self.data.iloc[:, 1].tolist() # Convert the second column to a list
-        
-    def filterdCherryDates(self):
-        cherryDates = []
-        
-        for date in self.cherryDates:
-            if date == 0 :
-                cherryDates.append(np.nan)
-            else :
-                cherryDates.append(date - (30 + 30 + 31 + 31))
-        return cherryDates
 
-    '''    
-    def displayCherryDates(self):
+    def displayTreeRingsChunks(self, chunk_size=200):
         
-        cherryDates = self.filterdCherryDates()
-        
-        plt.scatter(self.year, cherryDates, color='b', marker='x', label='Irregular points')
-        plt.plot(self.year, cherryDates, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
-        plt.xlabel(f"{self.year_label}")
-        plt.ylabel(f"{self.doyLabel}")
-        plt.title('Cherry Blossoms dates of lake suwa (DOY with beggining 01/12) ')
-        plt.legend()
-        plt.grid(True)
-        plt.show()
-    '''
+        min_year, max_year = min(self.year), max(self.year)
+        num_chunks = (max_year - min_year) // chunk_size + 1
+
+        for i in range(num_chunks):
+            start_year = min_year + i * chunk_size
+            end_year = start_year + chunk_size
+
+            # Filter data for this chunk
+            indices = [j for j, y in enumerate(self.year) if start_year <= y < end_year]
+            years_chunk = [self.year[j] for j in indices]
+            dates_chunk = [self.taille[j] for j in indices]
+
+            if not years_chunk:  # Skip empty chunks
+                continue
+
+            # Create a new figure for each chunk
+            plt.figure(figsize=(10, 5))
+            plt.scatter(years_chunk, dates_chunk, color='b', marker='x', label='Ring size')
+            plt.plot(years_chunk, dates_chunk, linestyle='dashed', color='gray', alpha=0.5)
+            plt.xlabel("Year")
+            plt.ylabel("Ring size (mm)")
+            plt.title(f'Tree rings size since 820 ({start_year}-{end_year-1})')
+            plt.legend()
+            plt.grid(True)
+
+            # Show and wait before plotting the next figure
+            plt.show()
 
     def displayTreeRings(self):
 
@@ -52,3 +58,4 @@ class Affichage:
         
 Affichage = Affichage("donne_tree_rings_europe_reformatees.csv")
 Affichage.displayTreeRings()
+Affichage.displayTreeRingsChunks()
