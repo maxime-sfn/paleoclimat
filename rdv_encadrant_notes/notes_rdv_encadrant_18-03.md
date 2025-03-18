@@ -28,3 +28,5 @@
 - Influence des tâches solaires et du minimu de Monder etc à peine distinguable
 - Trouver température moyenne hémisphère nord ?
 - Trouver des températures d'été avec les vendanges + essayer d'appliquer le modèle DTS (des modèles ont déjà été fait ?)
+
+# Prochain rdv avec Ciblat : 8 Avril à 11h
