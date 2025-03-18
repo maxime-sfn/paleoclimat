@@ -16,7 +16,7 @@ class Affichage:
         plt.plot(self.years, self.dvi, linestyle='dashed', color='gray', alpha=0.5)  # Relier les points
 
         plt.xlabel(f"{self.yearLabel}")
-        plt.ylabel(f"{self.dviLabel}")
+        plt.ylabel(f"DVI (Dust Veil Index)")
         plt.title('Affichage de points à intervalles irréguliers')
         plt.legend()
         plt.grid(True)
