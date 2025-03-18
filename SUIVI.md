@@ -63,5 +63,6 @@ Définition des grands axes de notre travail :
 ### Affichage / tracé des données
 
 - **Léo** : Script python pour l'affichage / tracé des données (qui sont au format csv).
+- **Maxime** : Fin de l'affichage des données du japon.
 
 ## Prochain rendez-vous avec l'encadrant le 18/03/2025 à 10h30
