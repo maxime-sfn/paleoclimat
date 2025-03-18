@@ -52,7 +52,7 @@ class Affichage:
         plt.scatter(self.year, omiwatariDates, color='b', marker='x', label='Irregular points')
         plt.plot(self.year, omiwatariDates, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
         plt.xlabel(f"{self.year_label}")
-        plt.ylabel(f"{self.freezingDates_label}")
+        plt.ylabel(f"Duration of the lake freezing period (days)")
         plt.title('Omiwatari dates of lake suwa (DOY with beggining 01/12) ')
         plt.legend()
         plt.grid(True)
@@ -67,12 +67,12 @@ class Affichage:
         
         for i in range(len(self.year)):
             freezingDuration.append(omiwatariDates[i] - freezingDates[i])
-            print(omiwatariDates[i] - freezingDates[i])
+            
         
         plt.scatter(self.year, freezingDuration, color='b', marker='x', label='Irregular points')
         plt.plot(self.year, freezingDuration, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
         plt.xlabel(f"{self.year_label}")
-        plt.ylabel(f"Duration of the lake freezing period")
+        plt.ylabel(f"Duration of the lake freezing period (days)")
         plt.title('Omiwatari dates of lake suwa (DOY with beggining 01/12) ')
         plt.legend()
         plt.grid(True)

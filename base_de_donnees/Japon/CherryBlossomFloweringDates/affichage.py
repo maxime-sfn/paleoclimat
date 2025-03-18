@@ -19,7 +19,7 @@ class Affichage:
             if date == 0 :
                 cherryDates.append(np.nan)
             else :
-                cherryDates.append(date - (30 + 30 + 31 + 31))
+                cherryDates.append(date - (30 + 30 + 31))
         return cherryDates
         
     def displayCherryDates(self):
@@ -29,8 +29,8 @@ class Affichage:
         plt.scatter(self.year, cherryDates, color='b', marker='x', label='Irregular points')
         plt.plot(self.year, cherryDates, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
         plt.xlabel(f"{self.year_label}")
-        plt.ylabel(f"{self.doyLabel}")
-        plt.title('Cherry Blossoms dates of lake suwa (DOY with beggining 01/12) ')
+        plt.ylabel(f"DOY from December 1st")
+        plt.title('Cherry Blossoms dates of sakuras in Tokyo (DOY with beggining 01/12) ')
         plt.legend()
         plt.grid(True)
         plt.show()
