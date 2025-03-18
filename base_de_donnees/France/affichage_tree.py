@@ -50,5 +50,5 @@ class Affichage:
 
         
         
-Affichage = Affichage("/Users/adrienroy/Documents/paleoclimat/base_de_donees/France/donne_tree_rings_europe_reformatees.csv")
+Affichage = Affichage("donne_tree_rings_europe_reformatees.csv")
 Affichage.displayTreeRings()
