@@ -25,7 +25,7 @@
 - Chercher corrélation hémisphère Nord : est-ce qu'un Omiwatari tardif est lié à un dégel de la Torne River précoce
 - On peut utiliser le R² SI les données sont visuellement cohérentes
 - Regarder la corrélation arbre/température (envoyer un mail à Magnuson)
-- Influence des tâches solaires et du minimu de Monder etc à peine distinguable
+- Influence des tâches solaires et du minimum de Monder etc à peine distinguable
 - Trouver température moyenne hémisphère nord ?
 - Trouver des températures d'été avec les vendanges + essayer d'appliquer le modèle DTS (des modèles ont déjà été fait ?)
 
