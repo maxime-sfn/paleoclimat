@@ -41,9 +41,9 @@ class Affichage:
 
         plt.scatter(self.year, self.taille, color='b', marker='x', label='Irregular points')
         plt.plot(self.year, self.taille, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
-        plt.xlabel(f"{self.year_label}")
-        plt.ylabel(f"{self.taille}")
-        plt.title('Tree rings depuis 820 ')
+        plt.xlabel(f"Year")
+        plt.ylabel(f"Ring size (mm)")
+        plt.title('Tree rings size since 820 ')
         plt.legend()
         plt.grid(True)
         plt.show()
