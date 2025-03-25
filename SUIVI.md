@@ -99,3 +99,12 @@ Détails dans notes_rdv_encadrant_18-03
 - Chercher des datas sur l'hémisphère nord : Température moyenne, corrélation entre les régions (est-ce qu'un Omiwatari tardif est lié à un dégel de la Torne River précoce ?) [**Gaspard]**
 - Essayer de trouver les tendances des températures d'été avec les dates de vendanges + voir si l'application du modèle DTS sur les vendanges a déjà été fait ? **[Adrien]**
 - Tester réseau de neurones même si on a pas assez de données **[Maxime]**
+
+
+## Séance du 25/03/2025
+
+
+- **Léo** a contacter Tiffaine pour pouvoir appeler les moines et a fini la visualization des datas des catastrophes naturelles.
+- **Maxime** a envoyé un mail à Magnuson pour avoir potentiellement avoir les datas sur le gel du lac en Finland sous format d'un tableau.
+- **Gaspard** a trouvé des nouvelles ressources sur l'omiwatari pour expliquer ce phénomène.
+- **Adrien** a continué à enrichir la base de donnée en ajoutant des données sur des vendanges en France.
