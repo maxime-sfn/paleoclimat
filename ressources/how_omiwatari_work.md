@@ -1,0 +1,1 @@
+Water has a high thermal capacity : hence, a protracted period is required in order to bring the water in condition for freezing. That the freezing dates give a fairly accurate record of winter severity in its own vicinity is evident.
