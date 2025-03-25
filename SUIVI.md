@@ -78,20 +78,24 @@ Définition des grands axes de notre travail :
 ### Prochain rendez-vous avec l'encadrant le 18/03/2025 à 10h30
 
 ## Séance du 18/03/2025
+
 ### Travail individuel
+
 - **Maxime** : Lecture des nouveaux papiers de recherhe fournis par l'encadrant
 - **Léo** : Mise en forme des dernières données françaises et code pour les afficher
 - **Gaspard** : Correction et uniformisation des légendes + récolte des différents graphes pour les présenter à l'encadrant
 - **Adrien** : Recherche de la corrélation en dandrochronologie entre la taille des tree rings et la température moyenne
 
 ### Rendez-vous avec l'encadrant
+
 Détails dans notes_rdv_encadrant_18-03
 
 ### Pour la prochaine fois
-- Contacter Tiffaine ou la prof de japonais mais il faut essayer d'appeler les moines
-- Relire en détails le papier américain et envoyer un mail à Magnuson pour avoir les tableaux de données
-- Chercher des détails sur le fonctionnement de l'Omiwatari pour savoir comment l'interpréter
-- Essayer de mesurer l'impact de l'urbanisation sur la floraison des sakuras
-- Chercher des datas sur l'hémisphère nord : Température moyenne, corrélation entre les régions (est-ce qu'un Omiwatari tardif est lié à un dégel de la Torne River précoce ?)
-- Essayer de trouver les tendances des températures d'été avec les dates de vendanges + voir si l'application du modèle DTS sur les vendanges a déjà été fait ?
-- Tester réseau de neurones même si on a pas assez de données
+
+- Contacter Tiffaine ou la prof de japonais mais il faut essayer d'appeler les moines [**Léo]**
+- Relire en détails le papier américain et envoyer un mail à Magnuson pour avoir les tableaux de données [**Maxime]**
+- Chercher des détails sur le fonctionnement de l'Omiwatari pour savoir comment l'interpréter [**Gaspard]**
+- Essayer de mesurer l'impact de l'urbanisation sur la floraison des sakuras [**Léo]**
+- Chercher des datas sur l'hémisphère nord : Température moyenne, corrélation entre les régions (est-ce qu'un Omiwatari tardif est lié à un dégel de la Torne River précoce ?) [**Gaspard]**
+- Essayer de trouver les tendances des températures d'été avec les dates de vendanges + voir si l'application du modèle DTS sur les vendanges a déjà été fait ? **[Adrien]**
+- Tester réseau de neurones même si on a pas assez de données **[Maxime]**
