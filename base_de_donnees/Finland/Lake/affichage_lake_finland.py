@@ -17,7 +17,7 @@ class Affichage:
         self.doy = []
         
         for i in range(len(self.month)):
-            day = 0
+            days = 0
             if self.month[i] == 4 :
                 days = 31 + 28 + 31 + self.day[i]
             if self.month[i] == 5 :
