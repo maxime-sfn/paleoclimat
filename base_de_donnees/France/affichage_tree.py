@@ -15,7 +15,8 @@ class Affichage:
 
     def displayTreeRingsChunks(self, chunk_size=200):
         
-        min_year, max_year = min(self.year), max(self.year)
+        # min_year, max_year = min(self.year), max(self.year)
+        min_year, max_year = 1820, max(self.year)
         num_chunks = (max_year - min_year) // chunk_size + 1
 
         for i in range(num_chunks):
@@ -36,7 +37,8 @@ class Affichage:
             plt.plot(years_chunk, dates_chunk, linestyle='dashed', color='gray', alpha=0.5)
             plt.xlabel("Year")
             plt.ylabel("Ring size (mm)")
-            plt.title(f'Tree rings size since 820 ({start_year}-{end_year-1})')
+            #plt.title(f'Tree rings size since 820 ({start_year}-{end_year-1})')
+            plt.title(f'Tree rings size ({start_year}-1959)')
             plt.legend()
             plt.grid(True)
 
@@ -49,7 +51,8 @@ class Affichage:
         plt.plot(self.year, self.taille, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
         plt.xlabel(f"Year")
         plt.ylabel(f"Ring size (mm)")
-        plt.title('Tree rings size since 820 ')
+        #plt.title('Tree rings size since 820 ')
+        plt.title('Tree rings size')
         plt.legend()
         plt.grid(True)
         plt.show()
