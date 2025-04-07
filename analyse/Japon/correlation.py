@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from time_series import CherryDataTest,KyotoTemperature
 
 class Correlateur:
     
@@ -43,32 +44,6 @@ class Correlateur:
         print(c)
         return c
     
-def CherryBlossomCorrelations():
-    
-    CherryData = pd.read_csv(rf"..\base_de_donnees\Japon\CherryBlossomFloweringDates\data.csv")
+myCorrelateur = Correlateur(CherryDataTest,KyotoTemperature)
 
-    TemperatureData = pd.read_csv(rf"..\base_de_donnees\Japon\Temperature\Kyoto\data.csv")
-
-    KyotoMeanTemperature = []
-
-    i = 0
-    for date in TemperatureData['Date']:
-        if date[0] == "3" : # Tous les dates de mars
-            KyotoMeanTemperature.append(TemperatureData["Kyoto"][i])
-        i += 1
-        
-    res = []
-    for i in range(len(KyotoMeanTemperature)//31):
-        sum = 0
-        for j in range(31):
-            sum += KyotoMeanTemperature[i*31 + j]
-        res.append(sum/31)
-        
-    x = res
-    y = CherryData.iloc[:,0].tolist()[1143:-1]
-
-
-    myCorrelateur = Correlateur(x,y)
-
-    myCorrelateur.correlation(0,-1)
-    
+myCorrelateur.correlation(0,-1)
