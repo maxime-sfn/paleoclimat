@@ -38,7 +38,7 @@ class Affichage:
     def displayCherryDatesChunks(self, chunk_size=200):
         cherryDates = self.filterdCherryDates()
         
-        min_year, max_year = min(self.year), max(self.year)
+        min_year, max_year = 2012,2020
         num_chunks = (max_year - min_year) // chunk_size + 1
 
         for i in range(num_chunks):
@@ -59,7 +59,7 @@ class Affichage:
             plt.plot(years_chunk, dates_chunk, linestyle='dashed', color='gray', alpha=0.5)
             plt.xlabel(self.year_label)
             plt.ylabel("DOY from Dec 1st")
-            plt.title(f'Cherry Blossom Dates in Tokyo (DOY with beggining 01/12) ({start_year}-{end_year-1})')
+            plt.title(f'Cherry Blossom Dates in Tokyo (DOY with beggining 01/12) ({start_year}-2021)')
             plt.legend()
             plt.grid(True)
 
