@@ -34,7 +34,7 @@ class Affichage:
         plt.plot(self.year, self.doy, linestyle='dashed', color='gray', alpha=0.5)  # Connect the points
         plt.xlabel(f"Years")
         plt.ylabel(f"DOY")
-        plt.title('DOY for freeze of dates of the river TORNIONJOKI in Dinland')
+        plt.title('DOY for freeze of dates of the river TORNIONJOKI in Finland(1891-2007)')
         plt.legend()
         plt.grid(True)
         plt.show()
