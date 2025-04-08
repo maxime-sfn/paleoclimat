@@ -107,5 +107,18 @@ Détails dans notes_rdv_encadrant_18-03
 - **Gaspard** a trouvé des nouvelles ressources sur l'omiwatari pour expliquer ce phénomène.
 - **Adrien** a continué à enrichir la base de donnée en ajoutant des données sur des vendanges en France.
 
-#Entre le Séance du 25/03/2025 et celle du 08/04/2025: 
+## Travail entre séance
+
+- **Léo** Recherche de prise de contact avec le temple du lac Suwa
+- **Maxime** Mise en place d'un code de régression pour la température et de corréaltion pour les dates de floraison des Sakuras
+- **Gaspard** Observation et relevé de la fleuraison des cerisiers au jardin des Tuileries
 - **Adrien**: 2 TH: Continuer et finir de recopier les données du livre "Le Climat depuis l'an mil" sur la date moyenne de vendanges en Europe (France N/E, Suisse Romane, Sud Rhenane) 
+
+## Séance du 08/04/2025
+
+- **Léo** Mise en place d'un code pour calculer et afficher l'erreur entre les données réelles et celle prédite par régression
+- **Maxime**
+- **Gaspard** Production et organisation de l'affichage des données au Japon, en France et en Finlande
+- **Adrien** Affichage / visualisation des données date moyenne vidanges Europe (France N/E, Suisse Romane , Sud Rhénane) 
+             Recherche + affichage et visualisation des Données Vidanges Beaune (1350-2024) 
+             Recherche + affichage et visualisation des Données de température dans la région autour de Beaune (1850-2024)
