@@ -6,11 +6,19 @@ Répertoire **"base_de_donnee"** : contient toutes les données de nos ressource
 
 Répertoire **"ressources"** : contient toutes les ressources (livres, données manuscrites du projet) et un bilbiographie.
 
+Répertoire **"analyse"** : contient toutes les recherches de corrélations à partir des différents datasets
+
+Répertoire **"Figure"** : contient tous les graphes et représentations des séries de données
+
+Répertoire **"rdv_encadrant"** : contient les différents compte-rendus des rendez-vous avec M.Ciblat
+
+Répertoire **"ressources pédagogiques"** : contient différents cours sur l'analyse des données et les réseaux de neurones
+
 ## Liens importants
 
 Zone de partage des documents du projet avec l'encadrant : https://partage.imt.fr/index.php/s/j9Tkxnx7jPmW7Hk
 
-## Liens de l'encadrant 
+## Liens de l'encadrant
 
 Des moines japonais ont tenu un journal climatique pendant 700 ans : https://www.nationalgeographic.fr/environnement/des-moines-japonais-ont-tenu-un-journal-climatique-pendant-700-ans
 
