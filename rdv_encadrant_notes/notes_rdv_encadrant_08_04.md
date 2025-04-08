@@ -14,7 +14,8 @@
 - Données sur le vin pas hyper révélatrices, essayer de faire une moyenne glissante sur 10 ans pour lisser les données
 - Virer les points aberrants sur la reconstruction non-linéaire des cherryblossoms + faire une explication écrite claire de la construction (quel dataset, quelles données d'entraînement, quel modèle) + comparer notre modèle avec celui d'Arrhenius dans les papiers
 - Choix du modèle : imposé par la physique ou tester et "avoir du nez"
-- Corriger les titres dans les datas sur la Finlande
+- Corriger les titres dans les datas sur la Finlande [FAIT]
+- Dates pas fiables selon Magnuson : changement de calendrier + dates "approximated" + confusion entre la ice cover et l'omiwatari
 
 ### Il manque : 
 
@@ -24,3 +25,5 @@
 ### A faire :
 
 - Forwarder le mail de tentative de contact des stations météos de Kyoto et Tokyo
+- Demander à Magnuson le contact du service météo à Suwa + pourquoi il a pas confiance dans certaines données (en gris) + faire une distinction claire si il a utilisé la date de gel ou la date d'Omiwatari
+- Faire à chaque fois la comparaison des courbes lissées/pas lissées
