@@ -8,9 +8,6 @@ from time_series import KyotoTemperature, Years
 pred_temp = temperature_reconstruite[767:]
 years_focus = Years[767:]
 
-print(len(pred_temp))
-print(len(KyotoTemperature))
-
 def square_error(a,b):
     out = 0
     for i in range(len(a)):
@@ -21,15 +18,15 @@ def square_error(a,b):
 def list_of_error(a,b):
     out = []
     for i in range(len(a)):
-        out.append((a[i]-b[i])**2)
+        out.append(abs(a[i]-b[i]))
     return out
 
 print(square_error(pred_temp,KyotoTemperature))
 
-err = [pred_temp[i] - KyotoTemperature[i] for i in range(len(pred_temp))]
+err = list_of_error(pred_temp,KyotoTemperature)
 
 plt.scatter(years_focus, pred_temp, color='b', marker='x')
-plt.plot(years_focus, err, linestyle='dashed', color='gray', alpha=0.5)
+plt.plot(years_focus, err, color='gray', alpha=0.5)
 plt.scatter(years_focus,KyotoTemperature,color='r', marker='o')
 plt.xlabel(f"years")
 plt.ylabel("temperature")
