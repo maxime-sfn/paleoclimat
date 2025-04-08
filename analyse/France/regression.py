@@ -21,9 +21,6 @@ fitted_params = result.x
 
 temperature_reconstruite = [model(fitted_params,x) for x in Vendange_data]
 
-print(len(temperature_reconstruite))
-print(len(Years))
-
 
 plt.scatter(Years, temperature_reconstruite, color='b', marker='x')
 plt.plot(Years, temperature_reconstruite, linestyle='dashed', color='gray', alpha=0.5)
