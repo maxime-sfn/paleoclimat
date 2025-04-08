@@ -26,10 +26,12 @@ def list_of_error(a,b):
 
 print(square_error(pred_temp,KyotoTemperature))
 
+err = [pred_temp[i] - KyotoTemperature[i] for i in range(len(pred_temp))]
+
 plt.scatter(years_focus, pred_temp, color='b', marker='x')
-plt.plot(years_focus, pred_temp-KyotoTemperature, linestyle='dashed', color='gray', alpha=0.5)
+plt.plot(years_focus, err, linestyle='dashed', color='gray', alpha=0.5)
 plt.scatter(years_focus,KyotoTemperature,color='r', marker='o')
 plt.xlabel(f"years")
 plt.ylabel("temperature")
-plt.title(f'linear regression comparaison')
+plt.title(f'Regression error comparison')
 plt.show()
