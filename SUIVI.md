@@ -106,3 +106,6 @@ Détails dans notes_rdv_encadrant_18-03
 - **Maxime** a envoyé un mail à Magnuson pour avoir potentiellement avoir les datas sur le gel du lac en Finland sous format d'un tableau.
 - **Gaspard** a trouvé des nouvelles ressources sur l'omiwatari pour expliquer ce phénomène.
 - **Adrien** a continué à enrichir la base de donnée en ajoutant des données sur des vendanges en France.
+
+#Entre le Séance du 25/03/2025 et celle du 08/04/2025: 
+- **Adrien**: 2 TH: Continuer et finir de recopier les données du livre "Le Climat depuis l'an mil" sur la date moyenne de vendanges en Europe (France N/E, Suisse Romane, Sud Rhenane) 
