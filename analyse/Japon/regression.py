@@ -25,12 +25,12 @@ def lisser_et_afficher(data, y, abscisse): #y correspondant à la durée de liss
         if i >= y:
             somme = 0
             for x in range(i - y, i):
-                somme += float(data_moyenne[x])
+                somme += float(data[x])
             data_moyenne[i] = (1 / y) * somme
         else:
             somme = 0
             for x in range(i+1):
-                somme += float(data_moyenne[x])
+                somme += float(data[x])
             data_moyenne[i] = (1/(i+1)) * somme
 
     # Affichage courbe lissée seule
