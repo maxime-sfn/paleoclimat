@@ -48,3 +48,30 @@ plt.ylabel("Estimated March Mean Temperature (°C)")
 plt.title("Temperature Reconstruction Using Arrhenius Model")
 plt.grid(True)
 plt.show()
+
+
+def lissage(x,y,nb_annee):
+
+    # Fonction de moyenne glissante
+    def moving_average(data, window_size):
+        return np.convolve(data, np.ones(window_size)/window_size, mode='valid')
+
+    # Paramètre de lissage
+    window_size = nb_annee
+    y_smoothed = moving_average(y, window_size)
+    x_smoothed = x[window_size - 1:]  # pour aligner les longueurs
+
+    # Affichage
+    #plt.plot(x, y, label="Données originales", linestyle="--", marker='o')
+    plt.plot(x_smoothed, y_smoothed, label=f"Moyenne glissante ({window_size} ans)", linewidth=2)
+    plt.legend()
+    plt.xlabel("Année")
+    plt.ylabel("Valeur")
+    plt.title("Lissage par moyenne glissante")
+    plt.grid(True)
+    plt.show()
+    
+lissage(Years, estimated_temperatures, 10)
+lissage(Years, estimated_temperatures, 20)
+lissage(Years, estimated_temperatures, 30)
+lissage(Years, estimated_temperatures, 40)
