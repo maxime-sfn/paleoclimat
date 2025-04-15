@@ -136,4 +136,4 @@ Détails dans notes_rdv_encadrant_18-03
 
 - **Maxime** Récupération de multiples données de gel de lacs à travers le monde en particulier les dates récentes sur le gel du lac Suwa. Établissement de la méthode d'arrhenius pour reconstruire la température à Suwa. Lissage de la température reconstruite avec une moyenne glissante sur 10, 20, 30 et 40 ans.
 
-- **Adrien** Lissage de nouvelles données (Vendanges Beaune + Vendenge Moyenne Europe), Interpretation et discussion avec Mr. Ciblat, Professeur referent
+- **Adrien** Fin du code d'algorithme de lissage de données (filtre moyenneur à 10,20,30,40 ans) et partage sur le git. Lissage de nouvelles données (Vendanges Beaune + Vendenge Moyenne Europe), Interpretation et discussion avec Mr. Ciblat, Professeur referent
