@@ -1,0 +1,6 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS432,WHITE LAKE,L,1951-52,-999,-999,-999,1952,5,4,-999,48.68,-85.62,CANADA,Y,
+WRS432,WHITE LAKE,L,1952-53,-999,-999,-999,1953,5,9,-999,48.68,-85.62,CANADA,Y,
+WRS432,WHITE LAKE,L,1953-54,-999,-999,-999,1954,5,16,-999,48.68,-85.62,CANADA,Y,
+WRS432,WHITE LAKE,L,1954-55,-999,-999,-999,1955,4,28,-999,48.68,-85.62,CANADA,Y,
+WRS432,WHITE LAKE,L,1955-56,-999,-999,-999,1956,5,15,-999,48.68,-85.62,CANADA,Y,

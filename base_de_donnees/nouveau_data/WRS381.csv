@@ -1,0 +1,3 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS381,SONA LAKE,L,1959-60,-999,-999,-999,1960,5,30,-999,53.58,-63.95,CANADA,Y,
+WRS381,SONA LAKE,L,1960-61,1960,11,7,-999,-999,-999,-999,53.58,-63.95,CANADA,Y,

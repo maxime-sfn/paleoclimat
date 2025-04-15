@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS298,LAKE LOUISE,L,1968-69,-999,-999,-999,1969,5,27,-999,50.65,-68.83,CANADA,Y,
+WRS298,LAKE LOUISE,L,1969-70,1969,12,28,1970,5,25,148,50.65,-68.83,CANADA,Y,
+WRS298,LAKE LOUISE,L,1970-71,1970,11,24,1971,5,19,176,50.65,-68.83,CANADA,Y,

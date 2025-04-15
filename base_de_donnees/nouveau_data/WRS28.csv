@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS28,CROWSNEST RIVER,R,1956-57,1957,1,20,1957,3,26,65,49.63,-114.08,CANADA,Y,
+WRS28,CROWSNEST RIVER,R,1957-58,-999,-999,-999,1958,3,31,-999,49.63,-114.08,CANADA,Y,
+WRS28,CROWSNEST RIVER,R,1958-59,1958,12,8,1959,3,27,109,49.63,-114.08,CANADA,Y,
+WRS28,CROWSNEST RIVER,R,1959-60,1959,11,15,1960,4,15,152,49.63,-114.08,CANADA,Y,

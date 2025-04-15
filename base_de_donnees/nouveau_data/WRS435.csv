@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS435,WILLISTON LAKE,L,1974-75,1974,12,15,-999,-999,-999,-999,55.3,-123.13,CANADA,Y,
+WRS435,WILLISTON LAKE,L,1975-76,1975,11,28,1976,5,20,174,55.3,-123.13,CANADA,Y,
+WRS435,WILLISTON LAKE,L,1977-78,1977,12,2,-999,-999,-999,-999,55.3,-123.13,CANADA,Y,
+WRS435,WILLISTON LAKE,L,1978-79,1978,11,25,-999,-999,-999,-999,55.3,-123.13,CANADA,Y,

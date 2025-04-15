@@ -1,0 +1,3 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS306,LAKE ONTARIO AT POINT PETRE,L,1957-58,-999,-999,-999,1958,3,18,-999,43.98,-77.15,CANADA,Y,
+WRS306,LAKE ONTARIO AT POINT PETRE,L,1959-60,-999,-999,-999,1960,4,5,-999,43.98,-77.15,CANADA,Y,

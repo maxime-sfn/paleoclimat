@@ -1,0 +1,6 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS92,NELSON RIVER,R,1956-57,-999,-999,-999,1957,5,4,-999,54.0,-97.8,CANADA,Y,
+WRS92,NELSON RIVER,R,1958-59,-999,-999,-999,1959,5,11,-999,54.0,-97.8,CANADA,Y,
+WRS92,NELSON RIVER,R,1959-60,-999,-999,-999,1960,5,3,-999,54.0,-97.8,CANADA,Y,
+WRS92,NELSON RIVER,R,1960-61,-999,-999,-999,1961,5,3,-999,54.0,-97.8,CANADA,Y,
+WRS92,NELSON RIVER,R,1961-62,-999,-999,-999,1962,5,1,-999,54.0,-97.8,CANADA,Y,

@@ -1,0 +1,3 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS325,LYNX LAKE,L,1990-91,1990,10,11,-999,-999,-999,-999,62.47,-106.88,CANADA,Y,
+WRS325,LYNX LAKE,L,1991-92,1991,10,13,-999,-999,-999,-999,62.47,-106.88,CANADA,Y,

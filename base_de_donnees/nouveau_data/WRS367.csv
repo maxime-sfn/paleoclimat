@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS367,REMI LAKE,L,1954-55,-999,-999,-999,1955,4,28,-999,49.42,-82.47,CANADA,Y,
+WRS367,REMI LAKE,L,1955-56,1955,11,17,1956,5,8,173,49.42,-82.47,CANADA,Y,
+WRS367,REMI LAKE,L,1959-60,-999,-999,-999,1960,5,19,-999,49.42,-82.47,CANADA,Y,
+WRS367,REMI LAKE,L,1960-61,-999,-999,-999,1961,5,11,-999,49.42,-82.47,CANADA,Y,

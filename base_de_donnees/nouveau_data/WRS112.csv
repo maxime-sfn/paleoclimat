@@ -1,0 +1,3 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS112,PEACE RIVER,R,1954-55,1954,11,30,-999,-999,-999,-999,55.93,-118.58,CANADA,Y,
+WRS112,PEACE RIVER,R,1955-56,1955,11,18,-999,-999,-999,-999,55.93,-118.58,CANADA,Y,

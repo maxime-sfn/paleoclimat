@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS377,SHUSWAP LAKE,L,1962-63,-999,-999,-999,1963,2,4,-999,50.88,-119.48,CANADA,Y,
+WRS377,SHUSWAP LAKE,L,1964-65,1965,2,12,1965,4,11,58,50.88,-119.48,CANADA,Y,
+WRS377,SHUSWAP LAKE,L,1968-69,1969,1,11,-999,-999,-999,-999,50.88,-119.48,CANADA,Y,

@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS245,GEORGIAN BAY,L,1988-89,1988,12,12,1989,5,5,144,44.85,-79.87,CANADA,Y,
+WRS245,GEORGIAN BAY,L,1989-90,1989,12,1,-999,-999,-999,-999,44.85,-79.87,CANADA,Y,
+WRS245,GEORGIAN BAY,L,1992-93,1993,1,5,-999,-999,-999,-999,44.85,-79.87,CANADA,Y,

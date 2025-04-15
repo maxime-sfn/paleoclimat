@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS266,JACKFISH LAKE,L,1952-53,-999,-999,-999,1953,4,25,-999,53.57,-113.52,CANADA,Y,
+WRS266,JACKFISH LAKE,L,1953-54,-999,-999,-999,1954,4,27,-999,53.57,-113.52,CANADA,Y,
+WRS266,JACKFISH LAKE,L,1954-55,-999,-999,-999,1955,5,10,-999,53.57,-113.52,CANADA,Y,
+WRS266,JACKFISH LAKE,L,1955-56,-999,-999,-999,1956,5,18,-999,53.57,-113.52,CANADA,Y,

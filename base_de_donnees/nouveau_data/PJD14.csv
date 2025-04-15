@@ -1,0 +1,6 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+PJD14,JACKS,L,1978-79,-999,-999,-999,1979,4,22,-999,45.3,-76.93,CANADA,Y,
+PJD14,JACKS,L,1979-80,-999,-999,-999,1980,4,14,-999,45.3,-76.93,CANADA,Y,
+PJD14,JACKS,L,1980-81,-999,-999,-999,1981,4,5,-999,45.3,-76.93,CANADA,Y,
+PJD14,JACKS,L,1981-82,-999,-999,-999,1982,4,28,-999,45.3,-76.93,CANADA,Y,
+PJD14,JACKS,L,1982-83,-999,-999,-999,1983,4,15,-999,45.3,-76.93,CANADA,Y,
