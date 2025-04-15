@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS145,SLAVE RIVER,R,1966-67,-999,-999,-999,1967,5,18,-999,59.87,-111.6,CANADA,Y,
+WRS145,SLAVE RIVER,R,1967-68,-999,-999,-999,1968,5,12,-999,59.87,-111.6,CANADA,Y,
+WRS145,SLAVE RIVER,R,1968-69,1968,11,19,1969,5,3,165,59.87,-111.6,CANADA,Y,
+WRS145,SLAVE RIVER,R,1969-70,1969,11,13,-999,-999,-999,-999,59.87,-111.6,CANADA,Y,

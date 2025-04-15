@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS355,PILING LAKE,L,1977-78,-999,-999,-999,1978,8,2,-999,68.93,-75.28,CANADA,Y,
+WRS355,PILING LAKE,L,1986-87,-999,-999,-999,1987,8,1,-999,68.93,-75.28,CANADA,Y,
+WRS355,PILING LAKE,L,1987-88,1987,10,1,-999,-999,-999,-999,68.93,-75.28,CANADA,Y,
+WRS355,PILING LAKE,L,1988-89,-999,-999,-999,1989,8,3,-999,68.93,-75.28,CANADA,Y,

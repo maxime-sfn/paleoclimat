@@ -1,0 +1,7 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+PJD20,MARBLE,L,1977-78,-999,-999,-999,1978,5,3,-999,45.24,-76.88,CANADA,Y,
+PJD20,MARBLE,L,1978-79,-999,-999,-999,1979,4,21,-999,45.24,-76.88,CANADA,Y,
+PJD20,MARBLE,L,1979-80,-999,-999,-999,1980,4,12,-999,45.24,-76.88,CANADA,Y,
+PJD20,MARBLE,L,1980-81,-999,-999,-999,1981,4,4,-999,45.24,-76.88,CANADA,Y,
+PJD20,MARBLE,L,1981-82,-999,-999,-999,1982,4,25,-999,45.24,-76.88,CANADA,Y,
+PJD20,MARBLE,L,1982-83,-999,-999,-999,1983,4,17,-999,45.24,-76.88,CANADA,Y,

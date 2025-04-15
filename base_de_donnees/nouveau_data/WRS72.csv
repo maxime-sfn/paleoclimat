@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS72,MANICOUAGAN RIVER,R,1968-69,-999,-999,-999,1969,6,2,-999,50.65,-68.83,CANADA,Y,
+WRS72,MANICOUAGAN RIVER,R,1969-70,1970,1,15,1970,5,22,127,50.65,-68.83,CANADA,Y,
+WRS72,MANICOUAGAN RIVER,R,1970-71,1970,12,4,1971,5,17,164,50.65,-68.83,CANADA,Y,

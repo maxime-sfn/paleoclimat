@@ -1,0 +1,7 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+PJD29,SMOKE,L,1981-82,-999,-999,-999,1982,5,1,-999,45.52,-78.68,CANADA,Y,
+PJD29,SMOKE,L,1982-83,-999,-999,-999,1983,5,1,-999,45.52,-78.68,CANADA,Y,
+PJD29,SMOKE,L,1983-84,-999,-999,-999,1984,4,26,-999,45.52,-78.68,CANADA,Y,
+PJD29,SMOKE,L,1984-85,-999,-999,-999,1985,4,29,-999,45.52,-78.68,CANADA,Y,
+PJD29,SMOKE,L,1988-89,-999,-999,-999,1989,5,3,-999,45.52,-78.68,CANADA,Y,
+PJD29,SMOKE,L,1991-92,-999,-999,-999,1992,5,10,-999,45.52,-78.68,CANADA,Y,

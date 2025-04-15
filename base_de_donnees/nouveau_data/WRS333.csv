@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS333,MCTAGGARD LAKE,L,1986-87,1986,8,30,-999,-999,-999,-999,76.23,-119.33,CANADA,Y,
+WRS333,MCTAGGARD LAKE,L,1988-89,1988,9,5,1989,6,20,288,76.23,-119.33,CANADA,Y,
+WRS333,MCTAGGARD LAKE,L,1989-90,1989,9,16,-999,-999,-999,-999,76.23,-119.33,CANADA,Y,

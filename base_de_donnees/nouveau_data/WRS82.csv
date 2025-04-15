@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS82,MIRAMICHI RIVER,R,1986-87,1986,12,8,1987,4,11,124,47.02,-65.45,CANADA,Y,
+WRS82,MIRAMICHI RIVER,R,1987-88,1987,12,15,1988,4,8,115,47.02,-65.45,CANADA,Y,
+WRS82,MIRAMICHI RIVER,R,1988-89,1988,12,6,1989,4,20,135,47.02,-65.45,CANADA,Y,
+WRS82,MIRAMICHI RIVER,R,1989-90,1989,12,1,1990,4,20,140,47.02,-65.45,CANADA,Y,

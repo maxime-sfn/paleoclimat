@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS39,FRASER RIVER,R,1968-69,-999,-999,-999,1969,3,4,-999,50.23,-121.58,CANADA,Y,
+WRS39,FRASER RIVER,R,1984-85,1985,1,4,-999,-999,-999,-999,50.23,-121.58,CANADA,Y,
+WRS39,FRASER RIVER,R,1986-87,-999,-999,-999,1987,1,28,-999,50.23,-121.58,CANADA,Y,

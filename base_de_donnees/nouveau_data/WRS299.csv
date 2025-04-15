@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS299,LAKE MANITOBA,L,1956-57,1956,11,30,1957,5,8,159,50.15,-98.5,CANADA,Y,
+WRS299,LAKE MANITOBA,L,1957-58,1957,11,29,1958,5,7,159,50.15,-98.5,CANADA,Y,
+WRS299,LAKE MANITOBA,L,1958-59,1958,11,27,1959,5,11,165,50.15,-98.5,CANADA,Y,

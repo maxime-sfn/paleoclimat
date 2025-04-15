@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS24,COAL RIVER,R,1962-63,-999,-999,-999,1963,5,10,-999,59.65,-127.07,CANADA,Y,
+WRS24,COAL RIVER,R,1963-64,-999,-999,-999,1964,4,20,-999,59.65,-127.07,CANADA,Y,
+WRS24,COAL RIVER,R,1964-65,-999,-999,-999,1965,4,30,-999,59.65,-127.07,CANADA,Y,

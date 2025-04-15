@@ -1,0 +1,3 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS297,LAKE LABERGE,L,1988-89,1988,12,28,1989,5,26,149,60.72,-135.07,CANADA,Y,
+WRS297,LAKE LABERGE,L,1989-90,1989,12,5,1990,5,20,166,60.72,-135.07,CANADA,Y,

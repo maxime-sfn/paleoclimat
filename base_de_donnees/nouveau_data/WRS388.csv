@@ -1,0 +1,6 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS388,SWAN LAKE,L,1960-61,1960,12,5,1961,3,8,93,50.23,-119.28,CANADA,Y,
+WRS388,SWAN LAKE,L,1961-62,1961,11,26,1962,4,4,129,50.23,-119.28,CANADA,Y,
+WRS388,SWAN LAKE,L,1962-63,1963,1,9,1963,3,22,72,50.23,-119.28,CANADA,Y,
+WRS388,SWAN LAKE,L,1963-64,1963,11,29,1964,4,3,126,50.23,-119.28,CANADA,Y,
+WRS388,SWAN LAKE,L,1964-65,1964,12,15,1965,4,16,122,50.23,-119.28,CANADA,Y,

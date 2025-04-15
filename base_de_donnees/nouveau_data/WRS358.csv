@@ -1,0 +1,6 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS358,POLICE LAKE,L,1963-64,-999,-999,-999,1964,7,10,-999,63.03,-90.72,CANADA,Y,
+WRS358,POLICE LAKE,L,1964-65,1964,10,5,1965,7,5,273,63.03,-90.72,CANADA,Y,
+WRS358,POLICE LAKE,L,1965-66,1965,9,27,1966,6,30,276,63.03,-90.72,CANADA,Y,
+WRS358,POLICE LAKE,L,1966-67,1966,10,11,1967,7,10,272,63.03,-90.72,CANADA,Y,
+WRS358,POLICE LAKE,L,1967-68,1967,10,3,1968,7,11,282,63.03,-90.72,CANADA,Y,

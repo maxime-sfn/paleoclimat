@@ -1,0 +1,6 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS192,ALLEN LAKE,L,1954-55,-999,-999,-999,1955,5,19,-999,58.42,-130.0,CANADA,Y,
+WRS192,ALLEN LAKE,L,1955-56,-999,-999,-999,1956,5,25,-999,58.42,-130.0,CANADA,Y,
+WRS192,ALLEN LAKE,L,1956-57,-999,-999,-999,1957,5,20,-999,58.42,-130.0,CANADA,Y,
+WRS192,ALLEN LAKE,L,1957-58,1957,11,9,1958,5,15,187,58.42,-130.0,CANADA,Y,
+WRS192,ALLEN LAKE,L,1958-59,-999,-999,-999,1959,5,21,-999,58.42,-130.0,CANADA,Y,

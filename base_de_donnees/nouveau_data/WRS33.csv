@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS33,FINLAY RIVER,R,1972-73,1973,1,2,1973,4,18,106,57.43,-125.63,CANADA,Y,
+WRS33,FINLAY RIVER,R,1973-74,1973,11,10,1974,4,29,170,57.43,-125.63,CANADA,Y,
+WRS33,FINLAY RIVER,R,1975-76,1975,12,7,1976,4,26,141,57.43,-125.63,CANADA,Y,
+WRS33,FINLAY RIVER,R,1977-78,-999,-999,-999,1978,4,26,-999,57.43,-125.63,CANADA,Y,

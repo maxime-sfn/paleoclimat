@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS277,LAC DE MONTIGNY,L,1957-58,-999,-999,-999,1958,4,30,-999,48.07,-77.78,CANADA,Y,
+WRS277,LAC DE MONTIGNY,L,1958-59,1958,11,26,1959,5,6,161,48.07,-77.78,CANADA,Y,
+WRS277,LAC DE MONTIGNY,L,1959-60,1959,11,27,1960,5,12,167,48.07,-77.78,CANADA,Y,

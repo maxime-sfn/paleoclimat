@@ -1,0 +1,5 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS147,SNARE RIVER,R,1951-52,-999,-999,-999,1952,5,25,-999,63.5,-116.0,CANADA,Y,
+WRS147,SNARE RIVER,R,1952-53,1952,11,10,1953,5,31,202,63.5,-116.0,CANADA,Y,
+WRS147,SNARE RIVER,R,1953-54,-999,-999,-999,1954,5,30,-999,63.5,-116.0,CANADA,Y,
+WRS147,SNARE RIVER,R,1954-55,-999,-999,-999,1955,5,21,-999,63.5,-116.0,CANADA,Y,

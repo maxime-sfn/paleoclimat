@@ -1,0 +1,4 @@
+lakecode,lakename,lakeorriver,season,iceon_year,iceon_month,iceon_day,iceoff_year,iceoff_month,iceoff_day,duration,latitude,longitude,country,froze,comments
+WRS335,MINNOW LAKE,L,1958-59,-999,-999,-999,1959,4,25,-999,46.62,-80.8,CANADA,Y,
+WRS335,MINNOW LAKE,L,1959-60,1959,11,19,1960,4,30,163,46.62,-80.8,CANADA,Y,
+WRS335,MINNOW LAKE,L,1960-61,1960,12,7,1961,4,29,143,46.62,-80.8,CANADA,Y,
