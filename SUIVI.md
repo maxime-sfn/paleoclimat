@@ -133,7 +133,10 @@ Détails dans notes_rdv_encadrant_18-03
 ## Séance du 15/04/2025
 
 - **Léo** Comparaison entre prédiction du réseau de neurone et de la regression sur la prédiction des températures à Kyoto à partir de la date de floraisons des Sakuras --> Réseau de neurone donne de très mauvaise prédiction car trop peu de données d'entrainement (overfit sur les données de test). On voit notamment apparaître des points aberrants sur certaines dates où les dates de floraison sont très tardives ou précoces (ex: pred de 40°C de moyenne sur le mois de mars en 1409)
+Lissage des courbes de prédictions de témpératures à Kyoto
 
 - **Maxime** Récupération de multiples données de gel de lacs à travers le monde en particulier les dates récentes sur le gel du lac Suwa. Établissement de la méthode d'arrhenius pour reconstruire la température à Suwa. Lissage de la température reconstruite avec une moyenne glissante sur 10, 20, 30 et 40 ans.
 
 - **Adrien** Fin du code d'algorithme de lissage de données (filtre moyenneur à 10,20,30,40 ans) et partage sur le git. Lissage de nouvelles données (Vendanges Beaune + Vendenge Moyenne Europe), Interpretation et discussion avec Mr. Ciblat, Professeur referent
+
+- **Gasaprd**
