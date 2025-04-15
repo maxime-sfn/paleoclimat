@@ -128,4 +128,8 @@ Détails dans notes_rdv_encadrant_18-03
 - **Maxime** Récolte de données pour le lac Suwa par discussion par couriel électronique avec le professeur américain. Envoie de mail pour question sur son papier.
 - **Léo** Travailler sur le modele de prediction sur les données Europe 
 - **Gaspard** Continuer le travail de la derniere séance 
-- **Adrien** Lisser les figures obtenues la derniere fois avec un filtre moyenneur 
+- **Adrien** Lisser les figures obtenues la derniere fois avec un filtre moyenneur
+
+## Séance du 15/04/2025
+
+- **Léo** Comparaison entre prédiction du réseau de neurone et de la regression sur la prédiction des températures à Kyoto à partir de la date de floraisons des Sakuras --> Réseau de neurone donne de très mauvaise prédiction car trop peu de données d'entrainement (overfit sur les données de test). On voit notamment apparaître des points aberrants sur certaines dates où les dates de floraison sont très tardives ou précoces (ex: pred de 40°C de moyenne sur le mois de mars en 1409)
