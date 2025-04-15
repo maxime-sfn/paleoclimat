@@ -126,3 +126,6 @@ Détails dans notes_rdv_encadrant_18-03
 ## Travail entre séance
 
 - **Maxime** Récolte de données pour le lac Suwa par discussion par couriel électronique avec le professeur américain. Envoie de mail pour question sur son papier.
+- **Léo** Travailler sur le modele de prediction sur les données Europe 
+- **Gaspard** Continuer le travail de la derniere séance 
+- **Adrien** Lisser les figures obtenues la derniere fois avec un filtre moyenneur 
