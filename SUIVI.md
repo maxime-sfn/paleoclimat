@@ -140,7 +140,7 @@ Détails dans notes_rdv_encadrant_18-03
 
 ## Séance du 16/04/2025
 
-- **Léo**
+- **Léo** 
 - **Maxime**
 - **Adrien**
 - **Gaspard**

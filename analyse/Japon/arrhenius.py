@@ -67,7 +67,7 @@ def lissage(x,y,nb_annee):
     plt.legend()
     plt.xlabel("Année")
     plt.ylabel("Valeur")
-    plt.title("Lissage par moyenne glissante")
+    plt.title(f"Lissage par moyenne glissante sur {nb_annee} ans")
     plt.grid(True)
     plt.show()
     
