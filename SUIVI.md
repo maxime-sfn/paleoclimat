@@ -141,6 +141,6 @@ Détails dans notes_rdv_encadrant_18-03
 ## Séance du 16/04/2025
 
 - **Léo** 
-- **Maxime**
+- **Maxime** Ajout de nouvelles figures et graphe avec le modèle d'arrhenius établit hier. 
 - **Adrien**
 - **Gaspard**
