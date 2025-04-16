@@ -142,5 +142,5 @@ Détails dans notes_rdv_encadrant_18-03
 
 - **Léo** Création courbe lissé sur les predictions de température avec régression et réseau de neurone -> les prédictions effectuées par le réseau de neurone semble totalement erronées car les courbes lissées font apparaître une forte baisse de la température à partir des années 1850 (non sens)
 - **Maxime**
-- **Adrien**
+- **Adrien** Analyse de l'article sceintifique "The longest homogenous series of grape harvest dates Beaune 1354-2018, and its significance for the understanding of past and present climate. Prise de note + debut d'analyse statistiques de mes données
 - **Gaspard**
