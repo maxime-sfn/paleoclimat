@@ -36,7 +36,7 @@ def lisser_et_afficher(data, y, abscisse): #y correspondant à la durée de liss
     # Affichage courbe lissée seule
     plt.figure(figsize=(18, 6))
     plt.plot(abscisse, data_moyenne, label='Moyenne mobile', color='blue')
-    plt.title("Courbe lissée")
+    plt.title("Courbe lissée sur "+str(y)+" années")
     plt.xticks(rotation=60)
     plt.grid(True)
     plt.legend()
@@ -49,7 +49,7 @@ fitted_params = result.x
 
 temperature_reconstruite = [model(fitted_params,x) for x in CherryData]
 
-lisser_et_afficher(temperature_reconstruite,10,Years)
+lisser_et_afficher(temperature_reconstruite,20,Years)
 
 plt.scatter(Years, temperature_reconstruite, color='b', marker='x')
 plt.plot(Years, temperature_reconstruite, linestyle='dashed', color='gray', alpha=0.5)

@@ -3,7 +3,7 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.model_selection import GridSearchCV
 from time_series import KyotoTemperature, CherryDataTest, Years, CherryData
 import matplotlib.pyplot as plt
-from regression import temperature_reconstruite
+from regression import temperature_reconstruite, lisser_et_afficher
 # Input: cherry dates, Output: March temperatures
 train_X = np.array(CherryDataTest).reshape(-1, 1)
 train_Y = np.array(KyotoTemperature).reshape(-1)
@@ -26,6 +26,8 @@ data_X = np.array(CherryData).reshape(-1,1)
 
 # Reconstruct March temperature from cherry blossom data
 temperature_reconstructed = model.predict(data_X)
+
+lisser_et_afficher(temperature_reconstructed,20,Years)
 
 plt.plot(Years, temperature_reconstructed, label='Predicted Temperature with Neural Network', linestyle='--', color="b")
 plt.plot(Years, temperature_reconstruite, label='Predicted Temperature with Regression', linestyle='-',color='g')
