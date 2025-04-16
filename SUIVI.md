@@ -112,31 +112,28 @@ Détails dans notes_rdv_encadrant_18-03
 - **Léo** Recherche de prise de contact avec le temple du lac Suwa
 - **Maxime** Mise en place d'un code de régression pour la température et de corréaltion pour les dates de floraison des Sakuras. Recherche de température historique en Finland et mise en forme. Discussion avec un proffesseur américain à propos de son papier pour avoir ses datas. Régression pour modéliser la température de la Finland historiquement.
 - **Gaspard** Observation et relevé de la fleuraison des cerisiers au jardin des Tuileries
-- **Adrien**: 2 TH: Continuer et finir de recopier les données du livre "Le Climat depuis l'an mil" sur la date moyenne de vendanges en Europe (France N/E, Suisse Romane, Sud Rhenane) 
+- **Adrien**: 2 TH: Continuer et finir de recopier les données du livre "Le Climat depuis l'an mil" sur la date moyenne de vendanges en Europe (France N/E, Suisse Romane, Sud Rhenane)
 
 ## Séance du 08/04/2025
 
 - **Léo** Mise en place d'un code pour calculer et afficher l'erreur entre les données réelles et celle prédite par régression
-- **Maxime** Mise en place d'un modèle de régression pour les données de la France. 
+- **Maxime** Mise en place d'un modèle de régression pour les données de la France.
 - **Gaspard** Production et organisation de l'affichage des données au Japon, en France et en Finlande
-- **Adrien** Affichage / visualisation des données date moyenne vidanges Europe (France N/E, Suisse Romane , Sud Rhénane) 
-             Recherche + affichage et visualisation des Données Vidanges Beaune (1350-2024) 
-             Recherche + affichage et visualisation des Données de température dans la région autour de Beaune (1850-2024)
+- **Adrien** Affichage / visualisation des données date moyenne vidanges Europe (France N/E, Suisse Romane , Sud Rhénane)
+  Recherche + affichage et visualisation des Données Vidanges Beaune (1350-2024)
+  Recherche + affichage et visualisation des Données de température dans la région autour de Beaune (1850-2024)
 
 ## Travail entre séance
 
 - **Maxime** Récolte de données pour le lac Suwa par discussion par couriel électronique avec le professeur américain. Envoie de mail pour question sur son papier.
-- **Léo** Travailler sur le modele de prediction sur les données Europe 
-- **Gaspard** Continuer le travail de la derniere séance 
+- **Léo** Travailler sur le modele de prediction sur les données Europe
+- **Gaspard** Continuer le travail de la derniere séance
 - **Adrien** Lisser les figures obtenues la derniere fois avec un filtre moyenneur
 
 ## Séance du 15/04/2025
 
 - **Léo** Comparaison entre prédiction du réseau de neurone et de la regression sur la prédiction des températures à Kyoto à partir de la date de floraisons des Sakuras --> Réseau de neurone donne de très mauvaise prédiction car trop peu de données d'entrainement (overfit sur les données de test). On voit notamment apparaître des points aberrants sur certaines dates où les dates de floraison sont très tardives ou précoces (ex: pred de 40°C de moyenne sur le mois de mars en 1409)
-Lissage des courbes de prédictions de témpératures à Kyoto
-
+  Lissage des courbes de prédictions de témpératures à Kyoto
 - **Maxime** Récupération de multiples données de gel de lacs à travers le monde en particulier les dates récentes sur le gel du lac Suwa. Établissement de la méthode d'arrhenius pour reconstruire la température à Suwa. Lissage de la température reconstruite avec une moyenne glissante sur 10, 20, 30 et 40 ans.
-
 - **Adrien** Fin du code d'algorithme de lissage de données (filtre moyenneur à 10,20,30,40 ans) et partage sur le git. Lissage de nouvelles données (Vendanges Beaune + Vendenge Moyenne Europe), Interpretation et discussion avec Mr. Ciblat, Professeur referent
-
-- **Gasaprd**
+- **Gaspard :** Après échanges avec l'encadrant et relecture du papier arakawa_omiwatari, je retente de trouver une corrélation entre dendrochronologie et tendance climatique. J'ai principalement entrepis de convertir les données de cette étude en un tableau csv.
