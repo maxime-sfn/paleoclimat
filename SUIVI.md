@@ -141,7 +141,7 @@ Détails dans notes_rdv_encadrant_18-03
 ## Séance du 16/04/2025
 
 - **Léo** Création courbe lissé sur les predictions de température avec régression et réseau de neurone -> les prédictions effectuées par le réseau de neurone semble totalement erronées car les courbes lissées font apparaître une forte baisse de la température à partir des années 1850 (non sens)
-- **Maxime**
+- **Maxime** Mise en commun de tous les graphes du Japon pour chercher des corrélations entre chaque et comprendre les tendances qui apparaissent. Expliquer les tendances grâces aux événement historiques du Japon.
 - **Adrien** Analyse de l'article sceintifique "The longest homogenous series of grape harvest dates Beaune 1354-2018, and its significance for the understanding of past and present climate. Prise de note + debut d'analyse statistiques de mes données
 - **Gaspard**: Suite et fin de la conversion des données de dendrochronologie près du lac de Suwa. 
 
