@@ -146,4 +146,5 @@ Détails dans notes_rdv_encadrant_18-03
 - **Gaspard**: Suite et fin de la conversion des données de dendrochronologie près du lac de Suwa. 
 
 ## Travail entre séances :
--**Gaspard** : Afficher toutes les données de denchronologie près du lac de Suwa et essayer d'y détecter des tendances météorologiques.
+- **Gaspard** : Afficher toutes les données de denchronologie près du lac de Suwa et essayer d'y détecter des tendances météorologiques.
+- **Maxime** Commencer à regarder les corrélations entre la finland et le japon.
