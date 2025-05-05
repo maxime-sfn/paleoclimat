@@ -148,6 +148,7 @@ Détails dans notes_rdv_encadrant_18-03
 ## Travail entre séances :
 - **Gaspard** : Afficher toutes les données de denchronologie près du lac de Suwa et essayer d'y détecter des tendances météorologiques.
 - **Maxime** Commencer à regarder les corrélations entre la finland et le japon.
+- **Adrien** Comprendre comment fonctionne les reseaux de neurones et les implementer sur mes datas de vidanges. 
 
 ## Rendez-vous avec l'encadrant le 30/04/2025
 voir notes_rdv_encadrant_30-04.md
