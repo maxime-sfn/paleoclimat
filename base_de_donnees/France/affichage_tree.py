@@ -5,7 +5,8 @@ import pandas as pd
 class Affichage:
     def __init__(self, dataFilename):
         self.data = pd.read_csv(dataFilename)
-        
+        print(self.data.columns[0])
+        print(self.data.columns[1])
         self.year_label = self.data.columns[0] # Get the name of the first column
         self.taille_label = self.data.columns[1]
                 
