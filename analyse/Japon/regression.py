@@ -43,6 +43,8 @@ def lisser_et_afficher(data, y, abscisse): #y correspondant à la durée de liss
     plt.tight_layout()
     plt.show()
 
+print(len(CherryDataTest), len(KyotoTemperature))
+
 result = minimize(rss, [100,0,80], args=(CherryDataTest, KyotoTemperature), method='Nelder-Mead')
 
 fitted_params = result.x

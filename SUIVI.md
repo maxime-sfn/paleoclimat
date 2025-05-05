@@ -160,3 +160,4 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Travail entre les séances :
 - **Gaspard** : Commencer la rédaction du rapport sur les enjeux du projet
+- **Maxime** : À Fait toutes les corrélations entre tous les différents pays.
