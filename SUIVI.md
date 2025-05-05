@@ -157,7 +157,8 @@ voir notes_rdv_encadrant_30-04.md
 ## Séance du 5/05/2025
 - **Adrien**: Code Python pour implementer un reseaux de neuronnes sur les données Temp = f(Date de Vendanges) sur la periode 1875-2024, test de RMSE pour pleins de configuration de reseaux differents (1,2,3 couches, 4,6,8 neuronnes par couches) et pour des batchs de 8,16,32 et 64 sur les dates 1850-1875. 
 - **Gaspard** : Code d'affichage des données csv de dendrochronologie des cyprès près de Suwa et premières recherches de corrélation
+- **Maxime** : À Fait toutes les corrélations entre tous les différents pays.
 
 ## Travail entre les séances :
 - **Gaspard** : Commencer la rédaction du rapport sur les enjeux du projet
-- **Maxime** : À Fait toutes les corrélations entre tous les différents pays.
+- **Maxime** : Calculer la RMSE pour le japon.
