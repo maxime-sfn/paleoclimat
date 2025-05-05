@@ -155,4 +155,4 @@ voir notes_rdv_encadrant_30-04.md
 
 
 ## Séance du 5/05/2025
-- **Adrien**: Code Python pour implementer un reseaux de neuronnes sur les données Temp = f(Date de Vendanges) sur la periode 1875-2024, test de RMSE pour pleins de configuration de reseaux differents (1,2,3 couches, 4,6,8 neuronnes par couches) et pour des batchs de 8,16,32 et 64. 
+- **Adrien**: Code Python pour implementer un reseaux de neuronnes sur les données Temp = f(Date de Vendanges) sur la periode 1875-2024, test de RMSE pour pleins de configuration de reseaux differents (1,2,3 couches, 4,6,8 neuronnes par couches) et pour des batchs de 8,16,32 et 64 sur les dates 1850-1875. 
