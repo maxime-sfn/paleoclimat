@@ -21,10 +21,11 @@ fitted_params = result.x
 
 temperature_reconstruite = [model(fitted_params,x) for x in Lake_data]
 
+np.savetxt(rf'..\corelation\finalnd.csv', temperature_reconstruite.reshape(1, -1), delimiter=',', fmt='%d')
 
 plt.scatter(Years, temperature_reconstruite, color='b', marker='x')
 plt.plot(Years, temperature_reconstruite, linestyle='dashed', color='gray', alpha=0.5)
 plt.xlabel(f"years")
 plt.ylabel("temperature")
-plt.title(f'linear regression')
+plt.title(f'regression')
 plt.show()

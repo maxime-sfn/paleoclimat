@@ -1,6 +1,6 @@
 import pandas as pd
 
-average_may_temperature = pd.read_csv(rf"..\..\base_de_donnees\Finland\temperature\data.csv")
+average_may_temperature = pd.read_csv(fr"..\..\base_de_donnees\Finland\temperature\data.csv")
 
 Temp_data = average_may_temperature.iloc[:,1].tolist()
 Years_training = average_may_temperature.iloc[:,0].tolist()
