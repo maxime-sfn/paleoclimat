@@ -162,3 +162,4 @@ voir notes_rdv_encadrant_30-04.md
 ## Travail entre les séances :
 - **Gaspard** : Commencer la rédaction du rapport sur les enjeux du projet
 - **Maxime** : Calculer la RMSE pour le japon.
+- **Adrien** Continuer l'implémentation du réseaux de neuronnes, comparaison avec les resultats hemisphere nord (Correlation)
