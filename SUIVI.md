@@ -174,3 +174,4 @@ voir notes_rdv_encadrant_30-04.md
 ## Travail entre les séances :
 - **Adrien** : Implementation d'un reseaux de neuronnes sur les tree rings en France et comparaison avec les données recontruites des temperatures à partir des vendanges. 
 - **Maxime**: Chercher un couplage pour améliorer le modèle arénus.
+- **Léo** Traitement des données d'entrainement pour réseau de neurones à Kyoto sur les dates de fleuraison
