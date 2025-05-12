@@ -1,12 +1,49 @@
-"""import numpy as np
+import numpy as np
+import pandas as pd
 from sklearn.neural_network import MLPRegressor
 from sklearn.model_selection import GridSearchCV
-from time_series import KyotoTemperature, CherryDataTest, Years, CherryData
 import matplotlib.pyplot as plt
+from time_series import CherryData,Years
 from regression import temperature_reconstruite, lisser_et_afficher
-# Input: cherry dates, Output: March temperatures
-train_X = np.array(CherryDataTest).reshape(-1, 1)
-train_Y = np.array(KyotoTemperature).reshape(-1)
+
+def calcul_temp_annuelle():
+    TemperatureData = pd.read_csv(rf"..\..\base_de_donnees\Japon\Temperature\Kyoto\data.csv")
+    TempMoyenneAnnuelle = []
+    Annee = []
+    i = 0
+    moyenne = 0
+    year = 0
+    while(i<len(TemperatureData["Kyoto"])):
+        TempMoyenneAnnuelle.append(moyenne)
+        Annee.append(year)
+        moyenne = 0
+        nb_jour = 0
+        year = int(TemperatureData["Date"][i][-4::])
+        while(int(TemperatureData["Date"][0][-4::]) == year):
+            moyenne += int(TemperatureData["Kyoto"][i])
+            nb_jour +=1
+            i +=1
+        moyenne = moyenne/nb_jour
+    return TempMoyenneAnnuelle[1:],Annee[1:]
+
+def filterd_cherry_data():
+    CherryData = pd.read_csv(rf"..\..\base_de_donnees\Japon\CherryBlossomFloweringDates\data.csv")
+    X = CherryData.iloc[:,1].tolist()
+    year = CherryData.iloc[:,0].tolist()
+    compteur = 0
+
+    for i in range(len(X)):
+        if(year[i]<1955):
+            compteur += 1
+    return X[compteur::]
+
+
+Temp,Years = calcul_temp_annuelle()
+CherryData = filterd_cherry_data()
+
+# Input: cherry dates, Output: Year mean temperatures
+train_X = np.array(CherryData).reshape(-1, 1)
+train_Y = np.array(Temp).reshape(-1)
 
 # Model training
 def train_model(X, Y):
@@ -47,8 +84,9 @@ plt.xlabel('Year')
 plt.ylabel('March Mean Temperature (°C)')
 plt.title('Reconstructed March Temperature from Cherry Blossom DOY')
 plt.legend()
-plt.show()"""
+plt.show()
 
+"""
 import numpy as np
 import torch
 import torch.nn as nn
@@ -125,3 +163,4 @@ plt.ylabel('March Mean Temperature (°C)')
 plt.title('Reconstructed March Temperature from Cherry Blossom DOY (PyTorch)')
 plt.legend()
 plt.show()
+"""
