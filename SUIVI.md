@@ -164,3 +164,4 @@ voir notes_rdv_encadrant_30-04.md
 - **Gaspard** : Commencer la rédaction du rapport sur les enjeux du projet
 - **Maxime** : Calculer la RMSE pour le japon.
 - **Adrien** Continuer l'implémentation du réseaux de neuronnes, comparaison avec les resultats hemisphere nord (Correlation)
+- **Léo** Débuggage réseau de neurones sur les flowering dates des sakuras
