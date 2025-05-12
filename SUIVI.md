@@ -149,7 +149,7 @@ Détails dans notes_rdv_encadrant_18-03
 - **Gaspard** : Afficher toutes les données de denchronologie près du lac de Suwa et essayer d'y détecter des tendances météorologiques.
 - **Maxime** Commencer à regarder les corrélations entre la finland et le japon.
 - **Adrien** Comprendre comment fonctionne les reseaux de neurones et les implementer sur mes datas de vidanges. 
-
+- **Léo** Lecture de la documentation de skitlearn
 ## Rendez-vous avec l'encadrant le 30/04/2025
 voir notes_rdv_encadrant_30-04.md
 
@@ -158,6 +158,7 @@ voir notes_rdv_encadrant_30-04.md
 - **Adrien**: Code Python pour implementer un reseaux de neuronnes sur les données Temp = f(Date de Vendanges) sur la periode 1875-2024, test de RMSE pour pleins de configuration de reseaux differents (1,2,3 couches, 4,6,8 neuronnes par couches) et pour des batchs de 8,16,32 et 64 sur les dates 1850-1875. 
 - **Gaspard** : Code d'affichage des données csv de dendrochronologie des cyprès près de Suwa et premières recherches de corrélation
 - **Maxime** : À Fait toutes les corrélations entre tous les différents pays.
+- **Léo** Ajustements sur le réseau de neurones des prédictions de températures à Kyoto
 
 ## Travail entre les séances :
 - **Gaspard** : Commencer la rédaction du rapport sur les enjeux du projet
