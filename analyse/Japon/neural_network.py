@@ -8,21 +8,25 @@ from regression import temperature_reconstruite, lisser_et_afficher
 
 def calcul_temp_annuelle():
     TemperatureData = pd.read_csv(rf"..\..\base_de_donnees\Japon\Temperature\Kyoto\data.csv")
+    TempKyoto = TemperatureData['Kyoto'].tolist()
+    Date = TemperatureData['Date'].tolist()
+    print(len(Date))
+    print(len(TempKyoto))
     TempMoyenneAnnuelle = []
     Annee = []
     i = 0
     moyenne = 0
     year = 0
-    while(i<len(TemperatureData["Kyoto"])):
+    while(i<len(TempKyoto)):
         TempMoyenneAnnuelle.append(moyenne)
         Annee.append(year)
         moyenne = 0
         nb_jour = 0
-        year = int(TemperatureData["Date"][i][-4::])
-        while(int(TemperatureData["Date"][0][-4::]) == year):
-            moyenne += int(TemperatureData["Kyoto"][i])
-            nb_jour +=1
-            i +=1
+        year = int(Date[i][-4::])
+        while((i<len(TempKyoto)) and int(Date[i][-4::]) == year):
+            moyenne += TempKyoto[i]
+            nb_jour += 1
+            i += 1
         moyenne = moyenne/nb_jour
     return TempMoyenneAnnuelle[1:],Annee[1:]
 
@@ -33,7 +37,7 @@ def filterd_cherry_data():
     compteur = 0
 
     for i in range(len(X)):
-        if(year[i]<1955):
+        if(year[i]<=1955):
             compteur += 1
     return X[compteur::]
 
@@ -44,6 +48,10 @@ CherryData = filterd_cherry_data()
 # Input: cherry dates, Output: Year mean temperatures
 train_X = np.array(CherryData).reshape(-1, 1)
 train_Y = np.array(Temp).reshape(-1)
+
+mask = ~np.isnan(train_Y)
+train_X = train_X[mask]
+train_Y = train_Y[mask]
 
 # Model training
 def train_model(X, Y):
