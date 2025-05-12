@@ -54,4 +54,8 @@ Pour constituer notre bibliographie et nos sets de données notamment, nous avon
 
 De même, nous avons été parfois confrontés à des problèmes de communication. Même après lecture des papiers de recherche avec notre encadrant, certains passages restent obscurs voire parfois un peu de l'arnaque. À nouveau, le traitement de sujets cruciaux nécessitent de s'appliquer sur le fond mais aussi sur la forme. 
 
-Enfin, notre projet peut avoir un impact historique intéressant. En termes de contexte tout d'abord, il peut permettre d'expliquer des phénomènes de périodes glaciaires, de famines, etc... catalyseurs indiscutables de mouvements sociaux et de décisions politiques majeures. Il aborde aussi la question de la transmissions du savoir. Par exemple, nous avons la chance d'avoir les dates de gel du lac Suwa depuis l'an 800 car le phénomène faisait parti d'un rite bouddhiste. 
+Enfin, notre projet peut avoir un impact historique intéressant. En termes de contexte tout d'abord, il peut permettre d'expliquer des phénomènes de périodes glaciaires, de famines, etc... catalyseurs indiscutables de mouvements sociaux et de décisions politiques majeures. Il aborde aussi la question de la transmissions du savoir. Par exemple, nous avons eu la chance d'avoir les dates de gel du lac Suwa depuis l'an 800 car le phénomène faisait parti d'un rite bouddhiste. 
+
+## Conclusion
+Ainsi ce projet peut avoir un certain impact sur notre sensibilité environnnementale tout en nous confrontant aux défis concrets de l’accès à la donnée et de la communication scientifique. Il permet également de faire le lien entre science et histoire.
+
