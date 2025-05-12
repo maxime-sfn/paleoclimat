@@ -165,3 +165,10 @@ voir notes_rdv_encadrant_30-04.md
 - **Maxime** : Calculer la RMSE pour le japon.
 - **Adrien** Continuer l'implémentation du réseaux de neuronnes, comparaison avec les resultats hemisphere nord (Correlation)
 - **Léo** Débuggage réseau de neurones sur les flowering dates des sakuras
+
+## Séance du 12/05/2025
+- **Adrien**: Implementation réseau de neuronnes sur les tree rings au Japon et les Temperature a Tokyo (Voir le dossier Figures), lissage des résultats et comparaison qualitative avec la prediction obtenue sur 1119-1900 avec la méthode de Arhenius. 
+
+
+## Travail entre les séances :
+- **Adrien** : Implementation d'un reseaux de neuronnes sur les tree rings en France et comparaison avec les données recontruites des temperatures à partir des vendanges. 
