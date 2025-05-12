@@ -1,31 +1,34 @@
-import numpy as np
 import pandas as pd
-import tensorflow as tf
-from sklearn.model_selection import train_test_split
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_squared_error
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 import matplotlib.pyplot as plt
 
-data_omiwatari = pd.read_csv(rf"..\..\base_de_donnees\Japon\FreezingDates_and_OmiwatariDates\data.csv")  # Load Omiwatari dates
-data_cherry = pd.read_csv(rf"..\..\base_de_donnees\Japon\CherryBlossomFloweringDates\data.csv")  # Load Cherry Blossom dates
+# === Chargement des données ===
+data_omiwatari = pd.read_csv(rf"..\..\base_de_donnees\Japon\FreezingDates_and_OmiwatariDates\data.csv")
+data_cherry = pd.read_csv(rf"..\..\base_de_donnees\Japon\CherryBlossomFloweringDates\data.csv")
 
-year_omiwatari = data_omiwatari.iloc[:, 0].tolist()  # Get the first column (year)
-year_cherry = data_cherry.iloc[:, 0].tolist()  # Get the first column (year)
+# === Prétraitement des données ===
+# Extraire les années et les dates d'Omiwatari et de floraison des cerisiers
+year_omiwatari = data_omiwatari.iloc[:, 0].tolist()
+year_cherry = data_cherry.iloc[:, 0].tolist()
+omiwatari_dates = data_omiwatari.iloc[:, 1].tolist()
+cherry_dates = data_cherry.iloc[:, 1].tolist()
 
-omiwatari_dates = data_omiwatari.iloc[:, 1].tolist()  # Get the second column (Omiwatari dates)
-cherry_dates = data_cherry.iloc[:, 1].tolist()  # Get the second column (Cherry Blossom dates)
-
+# Filtrer les années et dates valides
 filtered = [(y, d) for y, d in zip(year_omiwatari, omiwatari_dates) if d != "no" and d != "did"]
 year_omiwatari, omiwatari_dates = zip(*filtered) if filtered else ([], [])
 year_omiwatari = list(year_omiwatari)
 omiwatari_dates = list(omiwatari_dates)
 
-# Remove entries where cherry_dates is 0, keeping both lists aligned
+# Retirer les entrées où les dates de floraison sont nulles (0)
 year_cherry, cherry_dates = zip(*[(y, d) for y, d in zip(year_cherry, cherry_dates) if d != 0])
 year_cherry = list(year_cherry)
 cherry_dates = list(cherry_dates)
-        
-# Assuming the lists: year_omiwatari, omiwatari_dates, year_cherry, cherry_dates
 
-# Step 1: Create DataFrames from the lists for easier manipulation
+# Créer des DataFrames pour faciliter la manipulation
 df_omiwatari = pd.DataFrame({
     'year': year_omiwatari,
     'omiwatari_doy': omiwatari_dates
@@ -36,97 +39,92 @@ df_cherry = pd.DataFrame({
     'cherry_bloom_doy': cherry_dates
 })
 
-# Step 2: Merge the two datasets on the 'year' column
+# Fusionner les deux DataFrames sur la colonne "year"
 merged_df = pd.merge(df_omiwatari, df_cherry, on='year')
 
-# Step 3: Filter out invalid omiwatari or cherry bloom dates (if not already done)
-merged_df = merged_df[merged_df['omiwatari_doy'].notna() & merged_df['cherry_bloom_doy'].notna()]
+# Ajuster les dates de floraison des cerisiers (ajustement de 91 jours pour aligner les deux phénomènes)
+merged_df['adjusted_cherry_bloom_doy'] = merged_df['cherry_bloom_doy'].apply(lambda x: int(x) - 91)
 
-# Step 4: Extract the cleaned and aligned lists of years, omiwatari dates, and cherry blossom dates
-aligned_years = merged_df['year'].tolist()
-aligned_omiwatari_dates = merged_df['omiwatari_doy'].tolist()
-aligned_cherry_dates = merged_df['cherry_bloom_doy'].tolist()
+# === Séparation des données : entraînement (années récentes) et test (années plus anciennes) ===
+train_df = merged_df[merged_df['year'] >= 1900]  # Sélectionner les années récentes pour l'entraînement
+test_df = merged_df[merged_df['year'] < 1900]   # Sélectionner les années anciennes pour le test
 
-# Now, aligned_years, aligned_omiwatari_dates, and aligned_cherry_dates have the same years
-# You can use these for further analysis or model training
+X_train = train_df[['omiwatari_doy']].values
+y_train = train_df['adjusted_cherry_bloom_doy'].values
+X_test = test_df[['omiwatari_doy']].values
+y_test = test_df['adjusted_cherry_bloom_doy'].values
 
+# === Standardisation des variables explicatives ===
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
 
-aligned_cherry_dates = [int(date) - 91 for date in aligned_cherry_dates]
+# === Définition d'une fonction de construction de modèle générique ===
+def construire_modele(neurones_par_couche, activation='relu'):
+    model = Sequential()
+    model.add(Dense(neurones_par_couche[0], activation=activation, input_shape=(1,)))
+    for n in neurones_par_couche[1:]:
+        model.add(Dense(n, activation=activation))
+    model.add(Dense(1))
+    model.compile(optimizer='adam', loss='mse')
+    return model
 
-
-import numpy as np
-import pandas as pd
-import tensorflow as tf
-from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
-
-# Sample data: Replace this with your dataset
-data = {
-    "year": aligned_years,
-    "omiwatari_doy": aligned_omiwatari_dates,  # from Dec 1
-    "sakura_doy": aligned_cherry_dates  # from Dec 1
+# === Dictionnaire de configurations à tester (nombre de couches et neurones) ===
+configurations = {
+    "1 couche (8)": [8],
+    "2 couches (8,8)": [8, 8],
+    "2 couches (6,6)": [6,6],
+    "2 couches (4,4)": [4,4],
+    "2 couches (16,8)": [16, 8],
+    "3 couches (8,8,8)": [8, 8, 8],
+    "3 couches (6,6,6)": [6, 6, 6],  # ← celle qu'on va tester avec différents batchs
+    "3 couches (4,4,4)": [4, 4, 4],
 }
-df = pd.DataFrame(data)
 
-# Ensure the data is numeric
-df['omiwatari_doy'] = pd.to_numeric(df['omiwatari_doy'], errors='coerce')  # Convert to numeric
-df['sakura_doy'] = pd.to_numeric(df['sakura_doy'], errors='coerce')  # Convert to numeric
-df.dropna(subset=['omiwatari_doy', 'sakura_doy'], inplace=True)  # Drop rows with NaN
+# === Dictionnaire pour stocker les RMSE des différents modèles ===
+resultats = {}
 
-# Features and target
-X = df[['omiwatari_doy']].values
-y = df['sakura_doy'].values
+# === Boucle d'entraînement et d'évaluation ===
+for nom_config, structure in configurations.items():
+    
+    # Cas spécial : tester 3 batch_sizes uniquement pour la config (6,6,6)
+    if nom_config == "3 couches (6,6,6)":
+        for batch in [32,64]:
+            modele = construire_modele(structure, activation='relu')
+            modele.fit(X_train_scaled, y_train, epochs=500, batch_size=batch, verbose=0)
+            y_pred = modele.predict(X_test_scaled).flatten()
+            rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+            resultats[f"{nom_config} — batch={batch}"] = rmse
+            print(f"{nom_config} — batch={batch} → RMSE = {rmse:.3f}")
 
-# Split the data into training and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            # Tracé du graphique de prédiction vs réalité
+            plt.figure(figsize=(10, 4))
+            plt.plot(test_df['year'], y_test, label="Réalité")
+            plt.plot(test_df['year'], y_pred, label="Prédiction", linestyle="--")
+            plt.title(f"{nom_config} — batch={batch} — Prédiction (avant 1900)")
+            plt.xlabel("Année")
+            plt.ylabel("Date de floraison ajustée des cerisiers (DOY)")
+            plt.legend()
+            plt.grid(True)
+            plt.tight_layout()
+            plt.show()
+    
+    else:
+        modele = construire_modele(structure, activation='relu')
+        modele.fit(X_train_scaled, y_train, epochs=500, batch_size=32, verbose=0)
+        y_pred = modele.predict(X_test_scaled).flatten()
+        rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+        resultats[nom_config] = rmse
+        print(f"{nom_config} → RMSE = {rmse:.3f}")
 
-# Define the neural network model
-model = tf.keras.Sequential([
-    tf.keras.layers.Input(shape=(1,)),  # Using Input layer instead of input_dim
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dropout(0.2),  # Adding dropout to reduce overfitting
-    tf.keras.layers.Dense(64, activation='relu'),
-    tf.keras.layers.Dense(1)
-])
-
-# Compile the model
-model.compile(optimizer='adam', loss='mse')
-
-# Train the model
-history = model.fit(X_train, y_train, epochs=200, batch_size=8, validation_split=0.1)
-
-# Evaluate the model
-loss = model.evaluate(X_test, y_test)
-print(f"Test loss: {loss}")
-
-# Predictions
-y_pred = model.predict(X_test)
-
-# Plotting the results
-plt.figure(figsize=(8, 5))
-plt.scatter(X_test, y_test, label="True values", color='blue')
-plt.scatter(X_test, y_pred, label="Predicted values", color='red')
-plt.xlabel("Omiwatari DOY (from Dec 1)")
-plt.ylabel("Sakura Bloom DOY (from Dec 1)")
-plt.title("Sakura Bloom Prediction using Neural Network (Without Scaling)")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
-
-# Function to predict for a given input
-def predict_sakura_bloom(omiwatari_doy):
-    """Predict the sakura bloom date for a given omiwatari DOY."""
-    input_data = np.array([[omiwatari_doy]])  # reshape input for prediction
-    prediction = model.predict(input_data)
-    return prediction[0][0]  # Return the predicted DOY
-
-# Example: Predict for a new omiwatari date
-new_omiwatari_doy = 50  # Replace with any new omiwatari DOY you want to predict
-predicted_bloom_doy = predict_sakura_bloom(new_omiwatari_doy)
-print(f"Predicted Sakura Bloom DOY for Omiwatari DOY {new_omiwatari_doy}: {predicted_bloom_doy}")
-
-# Exporting the final predictions for all years in the dataset
-df["predicted_sakura_doy"] = model.predict(df[['omiwatari_doy']]).flatten()
-
-import ace_tools as tools; tools.display_dataframe_to_user(name="Sakura Bloom Model Predictions", dataframe=df)
+        # Tracé du graphique
+        plt.figure(figsize=(10, 4))
+        plt.plot(test_df['year'], y_test, label="Réalité")
+        plt.plot(test_df['year'], y_pred, label="Prédiction", linestyle="--")
+        plt.title(f"{nom_config} — Prédiction (avant 1900)")
+        plt.xlabel("Année")
+        plt.ylabel("Date de floraison ajustée des cerisiers (DOY)")
+        plt.legend()
+        plt.grid(True)
+        plt.tight_layout()
+        plt.show()

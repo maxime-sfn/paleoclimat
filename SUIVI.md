@@ -168,7 +168,9 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Séance du 12/05/2025
 - **Adrien**: Implementation réseau de neuronnes sur les tree rings au Japon et les Temperature a Tokyo (Voir le dossier Figures), lissage des résultats et comparaison qualitative avec la prediction obtenue sur 1119-1900 avec la méthode de Arhenius. 
+- **Maxmie**: Implémentation d'un réseau de neuronnes sur la date de omiwatari et la date de fleurisaon des sakuras.
 
 
 ## Travail entre les séances :
 - **Adrien** : Implementation d'un reseaux de neuronnes sur les tree rings en France et comparaison avec les données recontruites des temperatures à partir des vendanges. 
+- **Maxime**: Chercher un couplage pour améliorer le modèle arénus.
