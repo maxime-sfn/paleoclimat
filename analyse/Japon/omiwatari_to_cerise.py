@@ -46,8 +46,8 @@ merged_df = pd.merge(df_omiwatari, df_cherry, on='year')
 merged_df['adjusted_cherry_bloom_doy'] = merged_df['cherry_bloom_doy'].apply(lambda x: int(x) - 91)
 
 # === Séparation des données : entraînement (années récentes) et test (années plus anciennes) ===
-train_df = merged_df[merged_df['year'] >= 1900]  # Sélectionner les années récentes pour l'entraînement
-test_df = merged_df[merged_df['year'] < 1900]   # Sélectionner les années anciennes pour le test
+train_df = merged_df[merged_df['year'] >= 1600]  # Sélectionner les années récentes pour l'entraînement
+test_df = merged_df[merged_df['year'] < 1600]   # Sélectionner les années anciennes pour le test
 
 X_train = train_df[['omiwatari_doy']].values
 y_train = train_df['adjusted_cherry_bloom_doy'].values
@@ -71,14 +71,9 @@ def construire_modele(neurones_par_couche, activation='relu'):
 
 # === Dictionnaire de configurations à tester (nombre de couches et neurones) ===
 configurations = {
-    "1 couche (8)": [8],
     "2 couches (8,8)": [8, 8],
-    "2 couches (6,6)": [6,6],
-    "2 couches (4,4)": [4,4],
     "2 couches (16,8)": [16, 8],
     "3 couches (8,8,8)": [8, 8, 8],
-    "3 couches (6,6,6)": [6, 6, 6],  # ← celle qu'on va tester avec différents batchs
-    "3 couches (4,4,4)": [4, 4, 4],
 }
 
 # === Dictionnaire pour stocker les RMSE des différents modèles ===
@@ -87,44 +82,26 @@ resultats = {}
 # === Boucle d'entraînement et d'évaluation ===
 for nom_config, structure in configurations.items():
     
-    # Cas spécial : tester 3 batch_sizes uniquement pour la config (6,6,6)
-    if nom_config == "3 couches (6,6,6)":
-        for batch in [32,64]:
-            modele = construire_modele(structure, activation='relu')
-            modele.fit(X_train_scaled, y_train, epochs=500, batch_size=batch, verbose=0)
-            y_pred = modele.predict(X_test_scaled).flatten()
-            rmse = np.sqrt(mean_squared_error(y_test, y_pred))
-            resultats[f"{nom_config} — batch={batch}"] = rmse
-            print(f"{nom_config} — batch={batch} → RMSE = {rmse:.3f}")
-
-            # Tracé du graphique de prédiction vs réalité
-            plt.figure(figsize=(10, 4))
-            plt.plot(test_df['year'], y_test, label="Réalité")
-            plt.plot(test_df['year'], y_pred, label="Prédiction", linestyle="--")
-            plt.title(f"{nom_config} — batch={batch} — Prédiction (avant 1900)")
-            plt.xlabel("Année")
-            plt.ylabel("Date de floraison ajustée des cerisiers (DOY)")
-            plt.legend()
-            plt.grid(True)
-            plt.tight_layout()
-            plt.show()
+    modele = construire_modele(structure, activation='relu')
+    modele.fit(X_train_scaled, y_train, epochs=500, batch_size=32, verbose=0)
     
-    else:
-        modele = construire_modele(structure, activation='relu')
-        modele.fit(X_train_scaled, y_train, epochs=500, batch_size=32, verbose=0)
-        y_pred = modele.predict(X_test_scaled).flatten()
-        rmse = np.sqrt(mean_squared_error(y_test, y_pred))
-        resultats[nom_config] = rmse
-        print(f"{nom_config} → RMSE = {rmse:.3f}")
+    # Prédiction sur tout le jeu de données (train + test)
+    X_all_scaled = scaler.transform(merged_df[['omiwatari_doy']].values)
+    y_all_pred = modele.predict(X_all_scaled).flatten()
 
-        # Tracé du graphique
-        plt.figure(figsize=(10, 4))
-        plt.plot(test_df['year'], y_test, label="Réalité")
-        plt.plot(test_df['year'], y_pred, label="Prédiction", linestyle="--")
-        plt.title(f"{nom_config} — Prédiction (avant 1900)")
-        plt.xlabel("Année")
-        plt.ylabel("Date de floraison ajustée des cerisiers (DOY)")
-        plt.legend()
-        plt.grid(True)
-        plt.tight_layout()
-        plt.show()
+    # Calculer le RMSE
+    rmse = np.sqrt(mean_squared_error(y_test, y_all_pred[-len(y_test):]))  # RMSE sur le test uniquement
+    resultats[nom_config] = rmse
+    print(f"{nom_config} → RMSE = {rmse:.3f}")
+
+    # Tracé du graphique : Entraînement + Test (tout ensemble de données)
+    plt.figure(figsize=(10, 4))
+    plt.plot(merged_df['year'], merged_df['adjusted_cherry_bloom_doy'], label="Réalité (Tous)", linestyle='-', color='orange')
+    plt.plot(merged_df['year'], y_all_pred, label="Prédiction (Tous)", linestyle="--", color='blue')
+    plt.title(f"{nom_config} — Prédiction vs Réalité sur l'ensemble des données")
+    plt.xlabel("Année")
+    plt.ylabel("Date de floraison ajustée des cerisiers (DOY)")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
