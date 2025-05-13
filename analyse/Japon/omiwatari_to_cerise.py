@@ -85,16 +85,22 @@ for nom_config, structure in configurations.items():
     modele = construire_modele(structure, activation='relu')
     modele.fit(X_train_scaled, y_train, epochs=500, batch_size=32, verbose=0)
     
-    # Prédiction sur tout le jeu de données (train + test)
+    # Prédiction sur le jeu de données d'entraînement
+    y_train_pred = modele.predict(X_train_scaled).flatten()
+    
+    # Prédiction sur le jeu de données de test
+    y_test_pred = modele.predict(X_test_scaled).flatten()
+
+    # Prédiction sur l'ensemble des données après entraînement
     X_all_scaled = scaler.transform(merged_df[['omiwatari_doy']].values)
     y_all_pred = modele.predict(X_all_scaled).flatten()
 
     # Calculer le RMSE
-    rmse = np.sqrt(mean_squared_error(y_test, y_all_pred[-len(y_test):]))  # RMSE sur le test uniquement
+    rmse = np.sqrt(mean_squared_error(y_test, y_test_pred))  # RMSE sur le test uniquement
     resultats[nom_config] = rmse
     print(f"{nom_config} → RMSE = {rmse:.3f}")
 
-    # Tracé du graphique : Entraînement + Test (tout ensemble de données)
+    # Tracé du graphique : Prédictions sur l'ensemble des données (entraînement et test)
     plt.figure(figsize=(10, 4))
     plt.plot(merged_df['year'], merged_df['adjusted_cherry_bloom_doy'], label="Réalité (Tous)", linestyle='-', color='orange')
     plt.plot(merged_df['year'], y_all_pred, label="Prédiction (Tous)", linestyle="--", color='blue')
