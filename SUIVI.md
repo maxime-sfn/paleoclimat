@@ -177,3 +177,6 @@ voir notes_rdv_encadrant_30-04.md
 - **Maxime**: Chercher un couplage pour améliorer le modèle d'Arrhénius.
 - **Léo** Traitement des données d'entrainement pour réseau de neurones à Kyoto sur les dates de floraison
 - **Gaspard** : Chercher une corrélation entre les températures au Japon et les données de dendrochronologie.
+
+## Séance 16/05/2025
+- **Tous** : Rendez-vous avec l'encadrant, le détail est dans le compte rendu de la même date
