@@ -2,6 +2,10 @@ import numpy as np
 import pandas as pd
 from sklearn.neural_network import MLPRegressor
 from sklearn.model_selection import GridSearchCV
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_squared_error
+#from tensorflow.keras.models import Sequential
+#from tensorflow.keras.layers import Dense
 import matplotlib.pyplot as plt
 from time_series import CherryData,Years
 from regression import temperature_reconstruite, lisser_et_afficher
@@ -51,8 +55,55 @@ train_Y = np.array(Temp).reshape(-1)
 
 mask = ~np.isnan(train_Y)
 train_X = train_X[mask]
-train_Y = train_Y[mask]
+y_train = train_Y[mask]
+X_full = np.array(CherryData).reshape(-1,1)
 
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(train_X)
+
+# Transform the entire dataset for evaluation
+X_full_scaled  = scaler.transform(X_full)
+
+# === Model builder ===
+def construire_modele(neurones, activation='relu'):
+    model = Sequential()
+    model.add(Dense(neurones[0], activation=activation, input_shape=(1,)))
+    for n in neurones[1:]:
+        model.add(Dense(n, activation=activation))
+    model.add(Dense(1))
+    model.compile(optimizer='adam', loss='mse')
+    return model
+
+configs = {
+    "2 couches (8,8)":   [8,  8],
+    "2 couches (16,8)":  [16, 8]
+}
+
+for name, struct in configs.items():
+    model = construire_modele(struct)
+    model.fit(X_train_scaled, y_train, epochs=500, batch_size=32, verbose=0)
+    
+    # Predict on the full dataset
+    y_pred_full = model.predict(X_full_scaled).flatten()
+    y_pred_train = model.predict(X_train_scaled)
+    
+    # Compute RMSE on the **entire** dataset
+    rmse = np.sqrt(mean_squared_error(y_train, y_pred_train))
+    print(f"{name} → RMSE (full data) = {rmse:.3f}")
+    
+    # Plot
+    plt.figure(figsize=(10,4))
+    plt.plot(df['year'], df['adjusted_cherry_bloom_doy'], label='Réalité (Tous)',    linestyle='-',  color='orange')
+    plt.plot(df['year'], y_pred_full,                             label='Prédiction (Tous)', linestyle='--', color='blue')
+    plt.title(f"{name} — Prédiction vs Réalité sur l'ensemble des données")
+    plt.xlabel("Année")
+    plt.ylabel("Date de floraison ajustée des cerisiers (DOY)")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+"""
 # Model training
 def train_model(X, Y):
     param_grid = {'alpha': 10.0 ** -np.arange(1, 5)}
@@ -93,7 +144,7 @@ plt.ylabel('March Mean Temperature (°C)')
 plt.title('Reconstructed March Temperature from Cherry Blossom DOY')
 plt.legend()
 plt.show()
-
+"""
 """
 import numpy as np
 import torch
