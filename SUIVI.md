@@ -180,3 +180,6 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Séance 16/05/2025
 - **Tous** : Rendez-vous avec l'encadrant, le détail est dans le compte rendu de la même date
+
+## Travail entre les séances :
+- **Maxime** : Présentation pour l'audit.
