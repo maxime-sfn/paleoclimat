@@ -183,3 +183,8 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Travail entre les séances :
 - **Maxime** : Présentation pour l'audit.
+- **Adrien** : Début de la présentation pour l'audit.
+- **Gaspard** : Relecture de la présentation pour l'audit (correction de quelques coquilles)
+
+## Séance 19/05/2025
+- **Tous** : Audit.
