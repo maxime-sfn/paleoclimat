@@ -4,28 +4,52 @@ import matplotlib.pyplot as plt
 from scipy.optimize import minimize
 from time_series import Temp_data, Years, Lake_data, Lake_training_data
 
-# Define the non-linear regression model (for example, inverse model)
+# Define the non-linear regression model
 def model(params, lake_data):
     a, b, c = params
     return a / (lake_data - b) + c
 
-# Define the RSS function to minimize
+# Define RSS to minimize
 def rss(params, temp_data, doy_data):
     predicted_doy = model(params, temp_data)
     residuals = doy_data - predicted_doy
     return np.sum(residuals ** 2)
 
-result = minimize(rss, [100,0,80], args=(Lake_training_data, Temp_data), method='Nelder-Mead')
-
+# Fit the model
+result = minimize(rss, [100, 0, 80], args=(Lake_training_data, Temp_data), method='Nelder-Mead')
 fitted_params = result.x
 
-temperature_reconstruite = [model(fitted_params,x) for x in Lake_data]
+# Reconstruct temperature
+temperature_reconstruite = np.array([model(fitted_params, x) for x in Lake_data])
 
-np.savetxt(rf'..\corelation\finalnd.csv', temperature_reconstruite.reshape(1, -1), delimiter=',', fmt='%d')
+# Build DataFrame
+df = pd.DataFrame({
+    'Year': Years,
+    'Temp': temperature_reconstruite
+})
 
-plt.scatter(Years, temperature_reconstruite, color='b', marker='x')
-plt.plot(Years, temperature_reconstruite, linestyle='dashed', color='gray', alpha=0.5)
-plt.xlabel(f"years")
-plt.ylabel("temperature")
-plt.title(f'regression')
+# 10-year smoothing
+df['Temp_Smooth10'] = df['Temp'].rolling(window=10, center=True).mean()
+
+# === First Graph: Original reconstruction ===
+plt.figure(figsize=(10, 5))
+plt.scatter(df['Year'], df['Temp'], color='b', marker='x', label='Reconstructed')
+plt.plot(df['Year'], df['Temp'], linestyle='dashed', color='gray', alpha=0.5)
+plt.xlabel("Years")
+plt.ylabel("Temperature")
+plt.title("Reconstructed Temperature (Raw)")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# === Second Graph: 10-year smoothed ===
+plt.figure(figsize=(10, 5))
+plt.plot(df['Year'], df['Temp_Smooth10'], color='r', linewidth=2, label='10-year Smooth')
+plt.xlabel("Years")
+plt.ylabel("Temperature (Smoothed)")
+plt.title("10-Year Smoothed Temperature")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
 plt.show()

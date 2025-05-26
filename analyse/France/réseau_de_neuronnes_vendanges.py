@@ -102,7 +102,7 @@ for nom_config, structure in configurations.items():
         plt.figure(figsize=(10, 4))
         plt.plot(test_df['year'], y_test, label="Réalité")
         plt.plot(test_df['year'], y_pred, label="Prédiction", linestyle="--")
-        plt.title(f"{nom_config} — Prédiction (1850–1874)")
+        plt.title(f"{nom_config} — Prédiction (1850-1874)")
         plt.xlabel("Année")
         plt.ylabel("Température (°C)")
         plt.legend()
