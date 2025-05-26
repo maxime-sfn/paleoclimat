@@ -11,3 +11,5 @@
     4- Bonus : prédire l'un avec l'autre
 - Mettre en couleur la partie d'entraînement sur le réseau de neurones de Beaune + bien distinguer les points entraînés (=générés) et les points de validation qu'on a déjà
 - Quoi mettre sur l'affiche : introduire le problème, montrer notre méthode de travail, faire une affiche suffisament large et générale pour qu'on puisse parler dessus même si on a pas tout fini + pouvoir complèter en montrant sur notre ordi si besoin
+
+- Allez voir sur le site de Ciblat qui va nous envoyer par mail.
