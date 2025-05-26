@@ -170,18 +170,20 @@ voir notes_rdv_encadrant_30-04.md
 - **Adrien**: Implementation réseau de neuronnes sur les tree rings au Japon et les Temperature a Tokyo (Voir le dossier Figures), lissage des résultats et comparaison qualitative avec la prediction obtenue sur 1119-1900 avec la méthode de Arhenius. 
 - **Maxmie**: Implémentation d'un réseau de neuronnes sur la date de omiwatari et la date de fleurisaon des sakuras.
 - **Gaspard** : Rédaction du rapport sur l'impact environnemental et social de notre projet
+- **Léo** Traitement des données d'entrainement pour réseau de neurones à Kyoto sur les dates de floraison
 
 
 ## Travail entre les séances :
 - **Adrien** : Implementation d'un reseaux de neuronnes sur les tree rings en France et comparaison avec les données recontruites des temperatures à partir des vendanges. 
 - **Maxime**: Chercher un couplage pour améliorer le modèle d'Arrhénius.
-- **Léo** Traitement des données d'entrainement pour réseau de neurones à Kyoto sur les dates de floraison
+- **Léo** Traitement des données d'entrainement pour réseau de neurones à Kyoto sur les dates de floraison + recherche du modèle le plus optimisé
 - **Gaspard** : Chercher une corrélation entre les températures au Japon et les données de dendrochronologie.
 
 ## Séance 16/05/2025
 - **Tous** : Rendez-vous avec l'encadrant, le détail est dans le compte rendu de la même date
 
 ## Travail entre les séances :
+-**Léo** Fix du réseau de neuronne en implémentant un réseau de neurones avec la bibliothèque Tensor Flow + comparaison des modèles
 - **Maxime** : Présentation pour l'audit.
 - **Adrien** : Début de la présentation pour l'audit.
 - **Gaspard** : Relecture de la présentation pour l'audit (correction de quelques coquilles)
