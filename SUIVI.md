@@ -190,3 +190,7 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Séance 19/05/2025
 - **Tous** : Audit.
+
+
+## Séance 26/05/2025
+- **Tous** : Long rendez-vous avec Monsieur Ciblat pour discuter de notre avancement, valider nos travaux France/Japon et nous orienter pour la fin du projet.  
