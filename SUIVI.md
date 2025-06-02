@@ -194,3 +194,7 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Séance 26/05/2025
 - **Tous** : Long rendez-vous avec Monsieur Ciblat pour discuter de notre avancement, valider nos travaux France/Japon et nous orienter pour la fin du projet.  
+
+## Séance 02/06/2025
+- **Tous** : Préparation de la structure de l'affiche et répartition des différents modules
+- 
