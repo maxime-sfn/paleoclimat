@@ -197,4 +197,4 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Séance 02/06/2025
 - **Tous** : Préparation de la structure de l'affiche et répartition des différents modules
-- 
+- ** Adrien **: Ce que je dois mettre dans l'affiche: Enjeux et Résultats attendus, Reconstruction des températures/France, Interprétation/Validation des Résultats/France  
