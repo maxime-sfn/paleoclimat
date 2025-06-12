@@ -35,6 +35,7 @@
 
 ### Interpretation
 - en mettre une ou deux pertinentes (corrélation) en bullet point
+- essayer de passer les courbes en binaire et de détecter des événements extrêmes
 
 ## Bilan
 - faire une affiche qui nous aide un maximum à parler
