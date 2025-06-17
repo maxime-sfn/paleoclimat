@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import root_scalar
+import csv
 from time_series import CherryData, Years
 
 # === Constantes ===
@@ -43,13 +44,21 @@ plt.tight_layout()
 plt.show()
 
 # === Fonction de lissage améliorée ===
-def lissage(x, y, nb_annee):
+def lissage(x, y, nb_annee, save_csv=False, csv_filename="smoothed_data.csv"):
     def moving_average(data, window_size):
         return np.convolve(data, np.ones(window_size)/window_size, mode='valid')
 
     y_smoothed = moving_average(y, nb_annee)
     x_smoothed = x[nb_annee - 1:]
 
+    # Enregistrement CSV si demandé
+    if save_csv:
+        with open(csv_filename, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Year', 'SmoothedTemperature'])
+            writer.writerows(zip(x_smoothed, y_smoothed))
+
+    # Affichage graphique
     plt.figure(figsize=(12, 6))
     plt.plot(x_smoothed, y_smoothed, linewidth=2, label=f"Lissage ({nb_annee} ans)")
     plt.xlabel("Année", fontsize=16)
@@ -62,7 +71,7 @@ def lissage(x, y, nb_annee):
     plt.show()
 
 # === Graphiques de lissage ===
-lissage(Years, estimated_temperatures, 10)
+lissage(Years, estimated_temperatures, 10, save_csv=True, csv_filename="lissage_10_years.csv")
 lissage(Years, estimated_temperatures, 20)
 lissage(Years, estimated_temperatures, 30)
 lissage(Years, estimated_temperatures, 40)

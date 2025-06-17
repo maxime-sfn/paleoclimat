@@ -31,6 +31,12 @@ df = pd.DataFrame({
 # 10-year smoothing
 df['Temp_Smooth10'] = df['Temp'].rolling(window=10, center=True).mean()
 
+# 10-year smoothing
+df['Temp_Smooth10'] = df['Temp'].rolling(window=10, center=True).mean()
+
+# Save the smoothed data to CSV
+df[['Year', 'Temp_Smooth10']].dropna().to_csv("smoothed_temperature_10years.csv", index=False)
+
 # === First Graph: Original reconstruction ===
 plt.figure(figsize=(12, 6))
 plt.scatter(df['Year'], df['Temp'], color='b', marker='x', label='Reconstructed')

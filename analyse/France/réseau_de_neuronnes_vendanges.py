@@ -7,8 +7,8 @@ from tensorflow.keras.layers import Dense
 import matplotlib.pyplot as plt
 
 # === Chargement des données ===
-temp_df = pd.read_csv("Temp_Moyenne_mesurées_Beaune_1850_2024 (1).csv")
-vend_df = pd.read_csv("Vendanges_beaune_1355_2018 (1).csv")
+temp_df = pd.read_csv("Temp_Moyenne_mesurées_Beaune_1850_2024.csv")
+vend_df = pd.read_csv("Vendanges_beaune_1355_2018.csv")
 
 # === Prétraitement des fichiers CSV (renommage des colonnes) ===
 temp_df = temp_df.rename(columns={temp_df.columns[0]: "year", temp_df.columns[1]: "temperature"})
@@ -80,7 +80,7 @@ for nom_config, structure in configurations.items():
             plt.figure(figsize=(10, 4))
             plt.plot(test_df['year'], y_test, label="Réalité")
             plt.plot(test_df['year'], y_pred, label="Prédiction", linestyle="--")
-            plt.title(f"{nom_config} — batch={batch} — Prédiction (1850–1874)")
+            plt.title(f"{nom_config} — batch={batch} — Prédiction (1850-1874)")
             plt.xlabel("Année")
             plt.ylabel("Température (°C)")
             plt.legend()
@@ -110,4 +110,33 @@ for nom_config, structure in configurations.items():
         plt.tight_layout()
         plt.show()
         '''
-      
+
+
+# === Étape finale : entraînement sur toutes les années disponibles (fusionnées) ===
+X_all = merged_df[['vendanges_julian']].values
+y_all = merged_df['temperature'].values
+X_all_scaled = scaler.fit_transform(X_all)
+
+# Construction et entraînement du modèle final
+final_model = construire_modele([6, 6, 6], activation='relu')
+final_model.fit(X_all_scaled, y_all, epochs=500, batch_size=32, verbose=0)
+
+# === Prédiction sur toutes les années disponibles ===
+merged_df['Temp_Reconstructed'] = final_model.predict(X_all_scaled).flatten()
+
+# === Lissage sur 10 ans ===
+merged_df['Temp_Smooth10'] = merged_df['Temp_Reconstructed'].rolling(window=10, center=True).mean()
+
+# === Sauvegarde CSV ===
+merged_df[['year', 'Temp_Smooth10']].dropna().to_csv("reconstructed_temperature_smoothed_10years.csv", index=False)
+
+# === Tracé du graphique lissé ===
+plt.figure(figsize=(12, 6))
+plt.plot(merged_df['year'], merged_df['Temp_Smooth10'], color='r', linewidth=2, label='10-year Smoothed Temp')
+plt.xlabel("Année", fontsize=16)
+plt.ylabel("Température reconstruite (°C)", fontsize=16)
+plt.title("Température reconstruite par réseau de neurones — Lissage 10 ans", fontsize=20)
+plt.legend(fontsize=14)
+plt.grid(True)
+plt.tight_layout()
+plt.show()
