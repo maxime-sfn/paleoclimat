@@ -6,6 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 #from tensorflow.keras.models import Sequential
 #from tensorflow.keras.layers import Dense
+import csv
 import matplotlib.pyplot as plt
 from time_series import CherryData,Years
 from regression import temperature_reconstruite, lisser_et_afficher
@@ -53,6 +54,11 @@ CherryData = filterd_cherry_data()
 train_X = np.array(CherryData).reshape(-1, 1)
 train_Y = np.array(Temp).reshape(-1)
 
+file = open("température Japon", mode='w', newline='')
+writer = csv.writer(file)
+writer.writerow(['Temperature'])
+writer.writerows(zip(Temp))
+"""
 mask = ~np.isnan(train_Y)
 train_X = train_X[mask]
 y_train = train_Y[mask]
@@ -93,7 +99,7 @@ for name, struct in configs.items():
     
     # Plot
     plt.figure(figsize=(10,4))
-    plt.plot(df['year'], df['adjusted_cherry_bloom_doy'], label='Réalité (Tous)',    linestyle='-',  color='orange')
+    #plt.plot(Years, df['Kyoto'], label='Réalité (Tous)',    linestyle='-',  color='orange')
     plt.plot(df['year'], y_pred_full,                             label='Prédiction (Tous)', linestyle='--', color='blue')
     plt.title(f"{name} — Prédiction vs Réalité sur l'ensemble des données")
     plt.xlabel("Année")
@@ -102,7 +108,7 @@ for name, struct in configs.items():
     plt.grid(True)
     plt.tight_layout()
     plt.show()
-
+"""
 """
 # Model training
 def train_model(X, Y):

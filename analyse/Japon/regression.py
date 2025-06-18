@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import csv
 from scipy.optimize import minimize
 from time_series import CherryDataTest, KyotoTemperature, CherryData, Years
 
@@ -44,6 +45,11 @@ def lisser_et_afficher(data, y, abscisse): #y correspondant à la durée de liss
     plt.show()
 
 print(len(CherryDataTest), len(KyotoTemperature))
+
+file = open("température Japon", mode='w', newline='')
+writer = csv.writer(file)
+writer.writerow(['Temperature'])
+writer.writerows(zip(KyotoTemperature))
 
 result = minimize(rss, [100,0,80], args=(CherryDataTest, KyotoTemperature), method='Nelder-Mead')
 
