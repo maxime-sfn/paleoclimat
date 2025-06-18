@@ -201,3 +201,6 @@ voir notes_rdv_encadrant_30-04.md
 - **Maxime** : Ce que je dois mettre dans l'affiche: Enjeux et Résultats attendus, Reconstruction des températures/Japon et Finlande, Interprétation/Validation des Résultats/Japon. 
 - **Léo** : Ce que je dois mettre dans l'affiche: Expliquer le principe du réseau de neurones et des étapes pour arriver a un résultat + résultat japon
 - **Gaspard** : Faire toute la partie état de l'art et notamment le choix des proxys sur l'affiche 
+
+## Séance 18/06/2025
+- **Gaspard** : Légende des graphique de l'affiche + mise en forme
