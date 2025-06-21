@@ -89,7 +89,6 @@ for nom_config, structure in configurations.items():
             plt.show()
     
     else:
-      '''
         # Cas général pour les autres architectures avec batch par défaut (32)
         modele = construire_modele(structure, activation='relu')
         modele.fit(X_train_scaled, y_train, epochs=500, verbose=0)
@@ -109,34 +108,3 @@ for nom_config, structure in configurations.items():
         plt.grid(True)
         plt.tight_layout()
         plt.show()
-        '''
-
-
-# === Étape finale : entraînement sur toutes les années disponibles (fusionnées) ===
-X_all = merged_df[['vendanges_julian']].values
-y_all = merged_df['temperature'].values
-X_all_scaled = scaler.fit_transform(X_all)
-
-# Construction et entraînement du modèle final
-final_model = construire_modele([6, 6, 6], activation='relu')
-final_model.fit(X_all_scaled, y_all, epochs=500, batch_size=32, verbose=0)
-
-# === Prédiction sur toutes les années disponibles ===
-merged_df['Temp_Reconstructed'] = final_model.predict(X_all_scaled).flatten()
-
-# === Lissage sur 10 ans ===
-merged_df['Temp_Smooth10'] = merged_df['Temp_Reconstructed'].rolling(window=10, center=True).mean()
-
-# === Sauvegarde CSV ===
-merged_df[['year', 'Temp_Smooth10']].dropna().to_csv("reconstructed_temperature_smoothed_10years.csv", index=False)
-
-# === Tracé du graphique lissé ===
-plt.figure(figsize=(12, 6))
-plt.plot(merged_df['year'], merged_df['Temp_Smooth10'], color='r', linewidth=2, label='10-year Smoothed Temp')
-plt.xlabel("Année", fontsize=16)
-plt.ylabel("Température reconstruite (°C)", fontsize=16)
-plt.title("Température reconstruite par réseau de neurones — Lissage 10 ans", fontsize=20)
-plt.legend(fontsize=14)
-plt.grid(True)
-plt.tight_layout()
-plt.show()

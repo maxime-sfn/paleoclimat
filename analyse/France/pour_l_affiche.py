@@ -48,13 +48,23 @@ model.fit(X_train_scaled, y_train, epochs=500, batch_size=32, verbose=0)
 Y = model.predict(X_all_scaled).flatten()
 X = vend_df['year'].values
 
-print(X)
-print(Y)
+# === Création DataFrame pour sauvegarde et lissage ===
+df_pred = pd.DataFrame({
+    'year': X,
+    'Temp_Reconstructed': Y
+})
 
-# === Affichage (facultatif)
+# === Lissage 10 ans (centré) ===
+df_pred['Temp_Smooth10'] = df_pred['Temp_Reconstructed'].rolling(window=10, center=True).mean()
+
+# === Sauvegarde CSV ===
+df_pred[['year', 'Temp_Smooth10']].dropna().to_csv("reconstructed_temperature_1355_2018_smooth10.csv", index=False)
+
+# === Tracé du graphique final ===
 plt.figure(figsize=(12, 6))
-plt.plot(X, Y, label="Température prédite (1355–2018)", color="blue")
+plt.plot(X, Y, label="Température prédite (1355–2018)", color="blue", alpha=0.5)
 plt.plot(train_df['year'], train_df['temperature'], label="Mesures réelles (1875–2018)", color="red", linestyle="--")
+plt.plot(df_pred['year'], df_pred['Temp_Smooth10'], label="Lissage 10 ans", color="green", linewidth=2)
 plt.xlabel("Année")
 plt.ylabel("Température (°C)")
 plt.title("Reconstruction de la température (1355–2018) par réseau de neurones")
@@ -62,3 +72,4 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+q
