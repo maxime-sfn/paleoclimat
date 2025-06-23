@@ -53,7 +53,7 @@ writer.writerows(zip(KyotoTemperature))
 
 result = minimize(rss, [100,0,80], args=(CherryDataTest, KyotoTemperature), method='Nelder-Mead')
 
-fitted_params = result.x
+# fitted_params = result.x
 
 temperature_reconstruite = [model(fitted_params,x) for x in CherryData]
 
