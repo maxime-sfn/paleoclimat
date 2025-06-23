@@ -59,6 +59,8 @@ temperature_reconstruite = [model(fitted_params,x) for x in CherryData]
 
 lisser_et_afficher(temperature_reconstruite,40,Years)
 
+print(x)
+
 plt.scatter(Years, temperature_reconstruite, color='b', marker='x')
 plt.plot(Years, temperature_reconstruite, linestyle='dashed', color='gray', alpha=0.5)
 plt.xlabel(f"years")
