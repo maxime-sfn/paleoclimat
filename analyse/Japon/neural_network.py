@@ -15,8 +15,6 @@ def calcul_temp_annuelle():
     TemperatureData = pd.read_csv(rf"..\..\base_de_donnees\Japon\Temperature\Kyoto\data.csv")
     TempKyoto = TemperatureData['Kyoto'].tolist()
     Date = TemperatureData['Date'].tolist()
-    print(len(Date))
-    print(len(TempKyoto))
     TempMoyenneAnnuelle = []
     Annee = []
     i = 0
@@ -54,11 +52,6 @@ CherryData = filterd_cherry_data()
 train_X = np.array(CherryData).reshape(-1, 1)
 train_Y = np.array(Temp).reshape(-1)
 
-file = open("température Japon", mode='w', newline='')
-writer = csv.writer(file)
-writer.writerow(['Temperature'])
-writer.writerows(zip(Temp))
-"""
 mask = ~np.isnan(train_Y)
 train_X = train_X[mask]
 y_train = train_Y[mask]
@@ -108,7 +101,8 @@ for name, struct in configs.items():
     plt.grid(True)
     plt.tight_layout()
     plt.show()
-"""
+
+
 """
 # Model training
 def train_model(X, Y):
