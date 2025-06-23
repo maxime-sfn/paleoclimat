@@ -71,7 +71,7 @@ def lissage(x, y, nb_annee, save_csv=False, csv_filename="smoothed_data.csv"):
     plt.show()
 
 # === Graphiques de lissage ===
-lissage(Years, estimated_temperatures, 10, save_csv=True, csv_filename="lissage_10_years.csv")
+lissage(Years, estimated_temperatures, 10)
 lissage(Years, estimated_temperatures, 20)
 lissage(Years, estimated_temperatures, 30)
 lissage(Years, estimated_temperatures, 40)
