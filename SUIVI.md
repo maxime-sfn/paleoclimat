@@ -205,3 +205,4 @@ voir notes_rdv_encadrant_30-04.md
 ## Séance 18/06/2025
 - **Gaspard** : Légende des graphique de l'affiche + mise en forme
 - **Maxime** : Placement des graphes sur l'affiche.
+- ** Adrien **: Placement des moments historiques/tendances sur les graphes
