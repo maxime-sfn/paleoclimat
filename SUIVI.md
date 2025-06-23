@@ -210,3 +210,7 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Scéance 23/06/2025
 - **Léo** : Mise en relation data catastrophe naturelle et forte variation de la temp
+
+
+## Rendez-vous avec l'encadrant le 26/06/2025
+voir notes_rdv_encadrant_26-06.md
