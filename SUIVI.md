@@ -209,3 +209,4 @@ voir notes_rdv_encadrant_30-04.md
 - **Léo** : Gestion de la partie modèle de reconstruction -> création shéma réseau de neurones/édit des équations de modèle/ajout de précisions sur les modèles
 
 ## Scéance 23/06/2025
+- **Léo** : Mise en relation data catastrophe naturelle et forte variation de la temp
