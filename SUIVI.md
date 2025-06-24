@@ -212,6 +212,8 @@ voir notes_rdv_encadrant_30-04.md
 - **Léo** : Mise en relation data catastrophe naturelle et forte variation de la temp
 - **Adrien** : Code de fonction "binaire" (-1/1) et vote pour estimer des tendances globales entre le japon, la France et la Finlande et tentative de rapprochement avec eruptions volcnaiques importantes depuis 1400
 
+## Scéance 24/06/2025
+- ** Adrien ** Recherches sur les algorithmes de detection de ruptures et premieres implementations non fructueuse. 
 
 ## Rendez-vous avec l'encadrant le 26/06/2025
 voir notes_rdv_encadrant_26-06.md
