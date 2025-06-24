@@ -210,6 +210,7 @@ voir notes_rdv_encadrant_30-04.md
 
 ## Scéance 23/06/2025
 - **Léo** : Mise en relation data catastrophe naturelle et forte variation de la temp
+- **Adrien** : Code de fonction "binaire" (-1/1) et vote pour estimer des tendances globales entre le japon, la France et la Finlande et tentative de rapprochement avec eruptions volcnaiques importantes depuis 1400
 
 
 ## Rendez-vous avec l'encadrant le 26/06/2025
