@@ -215,5 +215,9 @@ voir notes_rdv_encadrant_30-04.md
 ## Scéance 24/06/2025
 - ** Adrien ** Recherches sur les algorithmes de detection de ruptures et premieres implementations non fructueuse. 
 
+## Scéance 25/06/2025
+- ** Adrien ** Implenetation algorithme de detection de ruptures en python avec 2 lois gaussiennes
+
+
 ## Rendez-vous avec l'encadrant le 26/06/2025
 voir notes_rdv_encadrant_26-06.md
